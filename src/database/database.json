@@ -1,0 +1,137 @@
+{
+    "user": {
+        "name": "Marcos",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114518532?v=4",
+        "location": "Brasil",
+        "about": "",
+        "bio": "Desenvolvedor Javascript Web Full Stack, em transição de carreira com experiência e conhecimento diversificado em outras áreas buscando pelo primeiro emprego como desenvolvedor front end."
+    },
+    "projects": [
+        {
+            "id": 1,
+            "image": "/cardNukenzie.png",
+            "name": "Nu Kenzie",
+            "url": "https://react-entrega-s1-template-nu-kenzie-psi.vercel.app/",
+            "technologies": [
+                {
+                    "name": "Typescript",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "React",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Styled-components",
+                    "logo": "/styled-components-svgrepo-com.png"
+                }
+            ],
+            "description": "Nu Kenzie, uma aplicação para gerenciamento de gastos, cadastrando entradas e saídas."
+        },
+        {
+            "id": 2,
+            "image": "/cardBurguerKenzie.png",
+            "name": "Burguer Kenzie",
+            "url": "https://react-entrega-template-hamburgueria-da-kenzie-red.vercel.app/",
+            "technologies": [
+                {
+                    "name": "Typescript",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "React",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Styled-components",
+                    "logo": "/styled-components-svgrepo-com.png"
+                }
+            ],
+            "description": "O projeto simula a parte de uma aplicação onde o cliente escolhe os produtos e adiciona ao carrinho."
+        },
+        {
+            "id": 3,
+            "image": "/cardKenzieHub.png",
+            "name": "Kenzie Hub",
+            "url": "https://react-entrega-kenzie-hub-zeta.vercel.app/",
+            "technologies": [
+                {
+                    "name": "Typescript",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "React",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Styled-components",
+                    "logo": "/styled-components-svgrepo-com.png"
+                }
+            ],
+            "description": "O projeto gerencia as tecnologias que o desenvolvedor cadastrado conhece. Para usar a aplicação, você precisará se cadastrar e fazer login."
+        },
+        {
+            "id": 4,
+            "image": "/cardNukenzie.png",
+            "name": "Nu Kenzie",
+            "url": "https://react-entrega-s1-template-nu-kenzie-psi.vercel.app/",
+            "technologies": [
+                {
+                    "name": "Typescript",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "React",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Styled-components",
+                    "logo": "/styled-components-svgrepo-com.png"
+                }
+            ],
+            "description": "Nu Kenzie, uma aplicação para gerenciamento de gastos, cadastrando entradas e saídas."
+        },
+        {
+            "id": 5,
+            "image": "/cardBurguerKenzie.png",
+            "name": "Burguer Kenzie",
+            "url": "https://react-entrega-template-hamburgueria-da-kenzie-red.vercel.app/",
+            "technologies": [
+                {
+                    "name": "Typescript",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "React",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Styled-components",
+                    "logo": "/styled-components-svgrepo-com.png"
+                }
+            ],
+            "description": "O projeto simula a parte de uma aplicação onde o cliente escolhe os produtos e adiciona ao carrinho."
+        },
+        {
+            "id": 6,
+            "image": "/cardKenzieHub.png",
+            "name": "Kenzie Hub",
+            "url": "https://react-entrega-kenzie-hub-zeta.vercel.app/",
+            "technologies": [
+                {
+                    "name": "Typescript",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "React",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                },
+                {
+                    "name": "Styled-components",
+                    "logo": "/styled-components-svgrepo-com.png"
+                }
+            ],
+            "description": "O projeto gerencia as tecnologias que o desenvolvedor cadastrado conhece. Para usar a aplicação, você precisará se cadastrar e fazer login."
+        }
+    ]
+}
