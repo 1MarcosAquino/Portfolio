@@ -15,6 +15,7 @@ type Tprojects = {
 const Projects = () => {
     return (
         <CardProjectStyled>
+            <h2>Projetos</h2>
             {projects.map((project: Tprojects) => (
                 <a
                     key={project.id}

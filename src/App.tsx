@@ -1,8 +1,6 @@
 import Header from './components/header';
 import Profile from './components/profile';
 import Projects from './components/projects';
-import Repositories from './components/repos';
-import Teste from './components/teste';
 
 import {
     ThemeDark,
@@ -23,13 +21,10 @@ const App = () => {
             <GlobalStyles />
             <TypographyStyled />
 
-            {/* <GlobalStyles /> */}
-
             <Header theme={theme} setTheme={setTheme} />
             <main>
                 <Profile />
-                {/* 
-                <Repositories />*/}
+
                 <Projects />
             </main>
         </>

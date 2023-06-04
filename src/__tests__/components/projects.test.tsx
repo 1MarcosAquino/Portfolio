@@ -1,3 +1,10 @@
-test('adds 1 + 2 to equal 3', () => {
-    expect((1+ 2)).toBe(3);
-  });
+import {render,screen} from '@testing-library/react'
+import Projects from '../../components/projects';
+
+describe('Projetos devem estar na tela.',()=> {
+  test('teste apareceram',()=>{
+    render(<Projects />);
+    expect(screen.getByText('Projetos')).toBeTruthy()
+  })
+})
+
