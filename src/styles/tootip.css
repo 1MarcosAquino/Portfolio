@@ -6,9 +6,9 @@
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 100px;
+    width: 6.25rem;
     background-color: var(--gray-100);
-    color: var(--secondary-color);
+    color: var(--gray-700);
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;

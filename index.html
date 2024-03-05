@@ -8,57 +8,91 @@
             href="./public/logo.jpg"
             type="image/x-icon"
         />
-        <title>PORTFÓLIO</title>
+
         <link rel="stylesheet" href="./src/styles/global.css" />
         <link rel="stylesheet" href="./src/styles/reset.css" />
-        <link rel="stylesheet" href="./src/styles/tootip.css" />
         <link rel="stylesheet" href="./src/styles/parallax.css" />
+        <link rel="stylesheet" href="./src/styles/logo.css" />
+        <link rel="stylesheet" href="./src/styles/tootip.css" />
         <link rel="stylesheet" href="./src/styles/index.css" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
 
         <link
             rel="stylesheet"
             type="text/css"
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
+
+        <title>PORTFÓLIO</title>
     </head>
 
-    <body style="max-width: 80%; margin: 0 auto">
+    <body>
         <header>
-            <h2>Olá, eu sou Marcos!</h2>
-            <ul class="menu">
-                <li>Início</li>
-                <li><a href="#Projetos">Projetos</a></li>
-                <li>Contato</li>
-            </ul>
+            <div class="container">
+                <h2 class="logo">
+                    <strong class="dev-name">Marcos Aquino</strong
+                    ><span>&#60; Desenvolvedor Web &#47;&#62;</span>
+                </h2>
+                <ul class="menu">
+                    <li><a href="#about">Início</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
         </header>
+
         <hr />
-        <div class="about">
-            <p>
-                Sou um desenvolvedor full-stack proficientemente versado em C#,
-                JavaScript e TypeScript. Tenho habilidade para criar aplicações
-                completas, desde a estruturação do banco de dados até a
-                elaboração da interface do usuário. Meu domínio abrange não
-                apenas as linguagens de programação, mas também as tecnologias
-                web, permitindo-me desenvolver projetos desde sua concepção até
-                a integração com diversas ferramentas existentes, como
-                frameworks, bibliotecas e plataformas de hospedagem.
-            </p>
-        </div>
 
-        <div class="parallax">
-            <div class="parallax-content"><div class="hardskills"></div></div>
-        </div>
+        <main>
+            <section class="parallax">
+                <div class="parallax-content container">
+                    <h3>Bem vindo!</h3>
+                    <h2 class="title"></h2>
+                </div>
+            </section>
 
-        <h2 id="Projetos">Projetos</h2>
+            <section class="container">
+                <div id="about" class="about">
+                    <h2 class="title">
+                        Sobre
+                        <span>mim!</span>
+                    </h2>
+                    <p>
+                        Tenho habilidade para
+                        <strong>criar aplicações completas</strong>, desde a
+                        estruturação do <strong>banco de dados</strong> até a
+                        elaboração da <strong>interface do usuário.</strong> Meu
+                        domínio abrange não apenas as linguagens de programação,
+                        mas também as tecnologias web, permitindo-me desenvolver
+                        projetos desde sua concepção até a
+                        <strong
+                            >integração com diversas ferramentas
+                            existentes</strong
+                        >, como frameworks, bibliotecas e plataformas de
+                        hospedagem.
+                    </p>
+                </div>
+                <div class="hardskills"></div>
+            </section>
 
-        <div class="projects"></div>
+            <div class="container">
+                <h2 class="title" id="projects">Meus <span>Projetos</span></h2>
+                <div class="projects"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2024 Portfólio de Marcos Aquino - Todos os direitos
+                    reservados!
+                </p>
+            </div>
+        </footer>
 
         <script type="module" src="./src/scripts/index.js"></script>
     </body>

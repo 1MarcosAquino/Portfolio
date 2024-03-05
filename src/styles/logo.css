@@ -1,0 +1,28 @@
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0.05rem;
+    span {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+    }
+}
+
+P {
+    strong {
+        color: var(--primary-color);
+    }
+}
+.dev-name {
+    background: linear-gradient(
+        to right,
+        var(--secondary-color),
+        var(--primary-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+}
