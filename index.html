@@ -1,13 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./public/logo.jpg"
+            type="image/x-icon"
+        />
+        <title>PORTFÓLIO</title>
+        <link rel="stylesheet" href="/src/styles/global.css" />
+        <link rel="stylesheet" href="/src/styles/reset.css" />
+        <link rel="stylesheet" href="/src/styles/tootip.css" />
+        <link rel="stylesheet" href="/src/styles/parallax.css" />
+        <link rel="stylesheet" href="/src/styles/index.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+    </head>
+
+    <body style="max-width: 80%; margin: 0 auto">
+        <header>
+            <h2>Olá, eu sou Marcos!</h2>
+            <ul class="menu">
+                <li>Início</li>
+                <li><a href="#Projetos">Projetos</a></li>
+                <li>Contato</li>
+            </ul>
+        </header>
+        <hr />
+        <div class="about">
+            <p>
+                Sou um desenvolvedor full-stack proficientemente versado em C#,
+                JavaScript e TypeScript. Tenho habilidade para criar aplicações
+                completas, desde a estruturação do banco de dados até a
+                elaboração da interface do usuário. Meu domínio abrange não
+                apenas as linguagens de programação, mas também as tecnologias
+                web, permitindo-me desenvolver projetos desde sua concepção até
+                a integração com diversas ferramentas existentes, como
+                frameworks, bibliotecas e plataformas de hospedagem.
+            </p>
+        </div>
+
+        <div class="parallax">
+            <div class="parallax-content"><div class="hardskills"></div></div>
+        </div>
+
+        <h2 id="Projetos">Projetos</h2>
+
+        <div class="projects"></div>
+
+        <script type="module" src="./src/scripts/index.js"></script>
+    </body>
 </html>
