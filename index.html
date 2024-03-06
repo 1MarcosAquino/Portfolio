@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="./src/styles/global.css" />
         <link rel="stylesheet" href="./src/styles/reset.css" />
         <link rel="stylesheet" href="./src/styles/parallax.css" />
-        <link rel="stylesheet" href="./src/styles/logo.css" />
         <link rel="stylesheet" href="./src/styles/tootip.css" />
         <link rel="stylesheet" href="./src/styles/index.css" />
 
@@ -32,29 +31,34 @@
     <body>
         <header>
             <div class="container">
-                <h2 class="logo">
-                    <strong class="dev-name">Marcos Aquino</strong
-                    ><span>&#60; Desenvolvedor Web &#47;&#62;</span>
-                </h2>
+                <div class="logo">
+                    <h2>Marcos Aquino</h2>
+                    <p>&#60; Desenvolvedor Web &#47;&#62;</p>
+                </div>
                 <ul class="menu">
-                    <li><a href="#about">Início</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li class="item-menu selected">
+                        <a href="#about">Início</a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#projects">Projetos</a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="#contact">Contato</a>
+                    </li>
                 </ul>
             </div>
+            <hr />
         </header>
 
-        <hr />
-
-        <main>
+        <main class="container">
             <section class="parallax">
-                <div class="parallax-content container">
+                <div class="parallax-content">
                     <h3>Bem vindo!</h3>
                     <h2 class="title"></h2>
                 </div>
             </section>
 
-            <section class="container">
+            <section>
                 <div id="about" class="about">
                     <h2 class="title">
                         Sobre
@@ -79,7 +83,7 @@
                 <div class="hardskills"></div>
             </section>
 
-            <div class="container">
+            <div>
                 <h2 class="title" id="projects">Meus <span>Projetos</span></h2>
                 <div class="projects"></div>
             </div>
@@ -87,10 +91,8 @@
 
         <footer>
             <div class="container">
-                <p>
-                    &copy; 2024 Portfólio de Marcos Aquino - Todos os direitos
-                    reservados!
-                </p>
+                &copy; 2024 Portfólio de Marcos Aquino - Todos os direitos
+                reservados!
             </div>
         </footer>
 
