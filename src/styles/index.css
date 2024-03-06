@@ -132,7 +132,8 @@ main {
     .projects {
         display: flex;
         flex-wrap: wrap;
-        /* gap: 1rem; */
+        justify-content: space-around;
+        row-gap: 1rem;
 
         .card {
             border-radius: 4px;
@@ -140,7 +141,7 @@ main {
             overflow: hidden;
 
             width: 100%;
-            max-width: 200px;
+            max-width: 400px;
             height: 200px;
             transition: linear 0.5s;
 
@@ -313,11 +314,10 @@ main {
 footer {
     color: var(--gray-100);
     font-size: small;
-    height: 6.25rem;
+    height: 3.25rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding-top: 1.8rem;
 }
 
 @media (min-width: 535px) {
