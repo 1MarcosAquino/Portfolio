@@ -2,15 +2,8 @@ import { api } from './api.js';
 import { renderSkills } from './hardskills.js';
 import { renderCard } from './card.js';
 
-(async () => {
-    const response = await api();
-    renderCard(response);
-})();
-
-renderSkills();
-
 const title = document.querySelector('.title');
-const texto = 'Marcos Aquino desenvolvedor Web.';
+const texto = `Da linha de código ao sucesso, vamos construir juntos.`;
 const delay = 100;
 
 function digitarTexto(elemento, textoCompleto, i) {
@@ -35,4 +28,7 @@ function apagarTexto(elemento, length) {
     }
 }
 
+const response = await api();
+renderCard(response);
 digitarTexto(title, texto, 0);
+renderSkills();

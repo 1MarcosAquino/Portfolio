@@ -14,13 +14,14 @@ header {
 
     div {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
+        row-gap: 1.25rem;
+        min-height: 80px;
     }
 
     .menu {
-        list-style: none;
         display: flex;
         column-gap: 1.25rem;
     }
@@ -30,13 +31,17 @@ header {
         color: var(--gray-100);
     }
 }
-hr {
+
+/* hr {
+    margin-top: 80px;
+    background-color: red;
+    height: 2px;
     background: linear-gradient(
         to right,
         var(--secondary-color),
         var(--primary-color)
     );
-}
+} */
 
 .about {
     padding: 2rem 0;
@@ -49,14 +54,12 @@ hr {
 
 .hardskills {
     display: flex;
+    align-items: end;
     gap: 2rem;
-    flex-wrap: wrap;
-
-    justify-content: space-between;
-
     width: 100%;
-
-    margin: 3rem auto;
+    height: 140px;
+    margin: 2rem 0;
+    overflow: hidden;
 
     i {
         font-size: 5rem;
@@ -161,4 +164,13 @@ hr {
 
         transition: linear 0.3s;
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem;
+    color: var(--gray-100);
+    font-size: small;
 }

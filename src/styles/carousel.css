@@ -1,0 +1,24 @@
+.carousel {
+    height: fit-content;
+    width: 100%; /* largura do carrossel */
+    overflow: hidden; /* esconder os slides além da largura definida */
+}
+/*.slide-container*/
+.carousel div {
+    /* display: flex;  tornar os slides flexíveis */
+    animation: scroll 10s linear infinite; /* animação de rolagem infinita */
+}
+
+.slide {
+    flex: 0 0 auto; /* tornar os slides flexíveis, mas não redimensionáveis */
+    width: 300px; /* largura do slide */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(+100px); /* começa a rolagem da posição inicial */
+    }
+    100% {
+        transform: translateX(-100px); /* rola um slide para a esquerda */
+    }
+}

@@ -1,7 +1,7 @@
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted var(--secondary-color);
+    /* border-bottom: 1px dotted var(--secondary-color); */
 }
 
 .tooltip .tooltiptext {
