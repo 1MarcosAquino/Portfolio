@@ -1,6 +1,7 @@
 :root {
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Kode Mono', monospace;
+
     --primary-color: #00e9ff;
     --secondary-color: #5c43e5;
     --gray-100: #f8f9fa;

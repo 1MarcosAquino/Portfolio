@@ -4,7 +4,6 @@
     flex-direction: column;
     row-gap: 0.05rem;
     span {
-        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
     }
 }

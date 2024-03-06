@@ -45,6 +45,11 @@ header {
 
 .about {
     padding: 2rem 0;
+    h2 {
+        /* font-family: 'Roboto Condensed', sans-serif; */
+        /* font-family: 'Noto Sans Khojki', sans-serif; */
+        font-family: 'Kode Mono', monospace;
+    }
 
     p {
         text-indent: 30px;
