@@ -103,10 +103,8 @@ header hr {
     color: var(--primary-color);
 }
 
+/*
 main {
-    margin-top: 0;
-
-    /*
      .projects {
         display: flex;
         flex-wrap: wrap;
@@ -198,9 +196,12 @@ main {
             transition: linear 0.3s;
         }
     } 
-    */
 }
+*/
 
+section {
+    scroll-margin-top: 9.5rem;
+}
 main .about p {
     text-indent: 2.1rem;
     text-align: justify;
@@ -321,10 +322,8 @@ footer {
 @media (min-width: 535px) {
     header div {
         justify-content: space-between;
-    }
-
-    main {
-        margin-top: 7rem;
+        align-items: center;
+        padding: 0.5rem 0;
     }
 
     .projects .language {
