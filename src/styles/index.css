@@ -1,6 +1,7 @@
 body {
     color: var(--gray-100);
     background-color: var(--gray-700);
+    margin-top: 9rem;
 }
 
 header {
@@ -9,7 +10,7 @@ header {
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: var(--gray-700);
+    /* background-color: var(--gray-700); */
 }
 
 header div {
@@ -18,7 +19,6 @@ header div {
     justify-content: center;
     align-items: center;
     row-gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .logo {
@@ -48,6 +48,7 @@ header div {
 .menu {
     display: flex;
     column-gap: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .item-menu {
@@ -103,7 +104,7 @@ header hr {
 }
 
 main {
-    margin-top: 8.5rem;
+    margin-top: 0;
 
     /*
      .projects {
@@ -200,14 +201,13 @@ main {
     */
 }
 
-main .about {
-    p {
-        text-indent: 2.1rem;
-        text-align: justify;
-    }
-    strong {
-        color: var(--primary-color);
-    }
+main .about p {
+    text-indent: 2.1rem;
+    text-align: justify;
+}
+
+main .about p strong {
+    color: var(--primary-color);
 }
 
 main .hardskills {
@@ -218,11 +218,10 @@ main .hardskills {
     height: 140px;
     margin: 2rem 0;
     overflow: hidden;
-
-    i {
-        font-size: 5rem;
-        color: var(--gray-100);
-    }
+}
+main .hardskills i {
+    font-size: 5rem;
+    color: var(--gray-100);
 }
 
 main .projects {
@@ -230,85 +229,84 @@ main .projects {
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 1rem;
+}
+.projects .card {
+    border-radius: 4px;
+    box-shadow: 0 4px 8px var(--gray-600);
+    overflow: hidden;
 
-    .card {
-        border-radius: 4px;
-        box-shadow: 0 4px 8px var(--gray-600);
-        overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    transition: linear 0.5s;
 
-        width: 100%;
-        max-width: 400px;
-        height: 200px;
-        transition: linear 0.5s;
+    background-image: url('../../public/OIP.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-        background-image: url('../../public/OIP.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+.projects .content {
+    margin: 0 auto;
+    background-color: var(--gray-600);
+    width: 100%;
+    height: 100%;
 
-    .content {
-        margin: 0 auto;
-        background-color: var(--gray-600);
-        width: 100%;
-        height: 100%;
+    padding: 1rem 0.5rem;
 
-        padding: 1rem 0.5rem;
+    position: relative;
+}
 
-        position: relative;
-    }
+.projects .name {
+    color: var(--gray-100);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
 
-    .name {
-        color: var(--gray-100);
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-    }
+.projects .description {
+    width: 100%;
+    height: 70%;
 
-    .description {
-        width: 100%;
-        height: 70%;
+    padding: 0.2rem;
 
-        padding: 0.2rem;
+    text-indent: 1rem;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: var(--gray-100);
 
-        text-indent: 1rem;
-        text-align: justify;
-        margin-bottom: 15px;
-        font-size: 0.9rem;
-        line-height: 1.2;
-        color: var(--gray-100);
+    overflow-y: auto;
+}
 
-        overflow-y: auto;
-    }
+.projects .language {
+    background-size: contain;
+    color: var(--gray-100);
 
-    .language {
-        background-size: contain;
-        color: var(--gray-100);
+    right: 5px;
+    bottom: 8px;
+    position: absolute;
+    transition: linear 0.3s;
+}
+.projects .language i {
+    font-size: 2.5rem;
+}
+.projects .homepage {
+    left: 45px;
+}
+.projects .homepage,
+.projects .html_url {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    text-decoration: none;
+    border-radius: 4px;
 
-        right: 5px;
-        bottom: 8px;
-        position: absolute;
-        transition: linear 0.3s;
-    }
-    .language i {
-        font-size: 2.5rem;
-    }
-    .homepage {
-        left: 45px;
-    }
-    .homepage,
-    .html_url {
-        display: inline-block;
-        padding: 4px 8px;
-        background-color: var(--gray-100);
-        color: var(--gray-700);
-        text-decoration: none;
-        border-radius: 4px;
+    position: absolute;
 
-        position: absolute;
+    bottom: 8px;
 
-        bottom: 8px;
-
-        transition: linear 0.3s;
-    }
+    transition: linear 0.3s;
 }
 
 footer {
@@ -321,25 +319,23 @@ footer {
 }
 
 @media (min-width: 535px) {
-    header {
-        div {
-            justify-content: space-between;
-        }
+    header div {
+        justify-content: space-between;
     }
 
     main {
         margin-top: 7rem;
+    }
 
-        .projects {
-            .language {
-                bottom: 0px;
-            }
-            .html_url {
-                bottom: 5px;
-            }
-            .homepage {
-                bottom: 5px;
-            }
-        }
+    .projects .language {
+        bottom: 0px;
+    }
+
+    .projects .html_url {
+        bottom: 5px;
+    }
+
+    .projects .homepage {
+        bottom: 5px;
     }
 }
