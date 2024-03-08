@@ -8,6 +8,8 @@
     --gray-600: rgba(47, 47, 47, 0.275);
     --gray-500: rgba(0, 0, 0, 0.581);
     --gray-700: #121214;
+
+    color: var(--gray-100);
 }
 
 ::-webkit-scrollbar {
