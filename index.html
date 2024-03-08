@@ -50,11 +50,13 @@
             <hr />
         </header>
 
-        <main class="container">
+        <main id="top" class="container">
             <aside class="parallax">
                 <div class="parallax-content">
                     <h3>Bem vindo!</h3>
                     <h2 class="title"></h2>
+
+                    <button class="tuor">Fazer tuor</button>
                 </div>
             </aside>
 
@@ -87,6 +89,72 @@
                 <h2 class="title">Meus <span>Projetos</span></h2>
                 <div class="projects"></div>
             </section>
+
+            <section id="contact">
+                <h2 class="title">Fale <span>comigo</span></h2>
+
+                <div class="contact">
+                    <div class="background">Contatos</div>
+                    <a
+                        class="button"
+                        href="https://wa.me/+5582993233217"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src="./public/whatsapp.svg" alt="WhatsApp" />
+                        <span class="tooltiptext">Meu WhatsApp</span>
+                        <img src="./public/arrow.svg" alt="Ir para o site" />
+                    </a>
+
+                    <button class="button" id="btnEmail">
+                        <img
+                            class="svg-icon"
+                            src="./public/gmail.svg"
+                            alt="Gmail"
+                        />
+                        <span>Copiar e-mail</span>
+                        <img src="./public/clipboard.svg" alt="Copiar e-mail" />
+                    </button>
+                    <script>
+                        const btn = document.querySelector('#btnEmail');
+                        btn.addEventListener('click', function () {
+                            var email = document.querySelector('#btnEmail');
+                            navigator.clipboard
+                                .writeText('contatomarcosaquino@gmail.com')
+                                .then(() => {
+                                    alert(
+                                        'Conteúdo copiado para a área de transferência!'
+                                    );
+                                })
+                                .catch((err) => {
+                                    console.error('Falha ao copiar: ', err);
+                                });
+                        });
+                    </script>
+
+                    <a
+                        class="button"
+                        href="https://linkedin.com/in/marcosaquino21"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src="./public/linkedin.svg" alt="LinkedIn" />
+                        <span class="tooltiptext">LinkedIn</span>
+                        <img src="./public/arrow.svg" alt="Ir para o site" />
+                    </a>
+
+                    <a
+                        class="button"
+                        href="https://github.com/1MarcosAquino/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src="./public/github.svg" alt="GitHub" />
+                        <span class="tooltiptext">GitHub</span>
+                        <img src="./public/arrow.svg" alt="Ir para o site" />
+                    </a>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -94,6 +162,7 @@
                 &copy; 2024 Portfólio de Marcos Aquino - Todos os direitos
                 reservados!
             </div>
+            <a class="backTop" href="#top">VOLTA AO TOPO</a>
         </footer>
 
         <script type="module" src="./src/scripts/index.js"></script>

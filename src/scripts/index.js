@@ -3,32 +3,55 @@ import { renderSkills } from './hardskills.js';
 import { renderCard } from './card.js';
 
 const title = document.querySelector('.title');
-const texto = `Da linha de código ao sucesso, vamos construir juntos.`;
+const text = `Da linha de código ao sucesso, vamos construir juntos.`;
 const delay = 100;
 
-function digitarTexto(elemento, textoCompleto, i) {
-    if (i < textoCompleto.length) {
-        elemento.innerHTML += textoCompleto.charAt(i);
-        setTimeout(() => digitarTexto(elemento, textoCompleto, i + 1), delay);
+function typeText(element, text, i) {
+    if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        setTimeout(() => typeText(element, text, i + 1), delay);
     } else {
-        setTimeout(() => apagarTexto(elemento, textoCompleto.length), 1000);
+        setTimeout(() => deleteText(element, text.length), 1000);
     }
 }
 
-function apagarTexto(elemento, length) {
+function deleteText(element, length) {
     if (length >= 0) {
-        elemento.innerHTML = texto.substring(0, length);
-        setTimeout(() => apagarTexto(elemento, length - 1), delay);
+        element.innerHTML = text.substring(0, length);
+        setTimeout(() => deleteText(element, length - 1), delay);
     }
 
     if (length == 0) {
         setTimeout(() => {
-            digitarTexto(title, texto, 0);
+            typeText(title, text, 0);
         }, 300);
     }
 }
 
+function mudarClasse() {
+    const $ = (elemnt) => document.querySelectorAll(elemnt);
+
+    window.addEventListener('scroll', function () {
+        $('section').forEach((elemnt) => {
+            var posicao = elemnt.getBoundingClientRect().top;
+            if (
+                posicao <= (innerHeight / 100) * 60 &&
+                posicao >= (innerHeight / 100) * 10
+            ) {
+                $('.item-menu').forEach((el) => {
+                    if (el.children[0].href.split('#', -1)[1] === elemnt.id) {
+                        el.classList.add('selected');
+                    } else {
+                        el.classList.remove('selected');
+                    }
+                });
+            }
+        });
+    });
+}
+mudarClasse();
+
 const response = await api();
 renderCard(response);
-digitarTexto(title, texto, 0);
-renderSkills();
+typeText(title, text, 0);
+renderSkills(10);

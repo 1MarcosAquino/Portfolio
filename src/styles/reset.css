@@ -1,7 +1,9 @@
-/* body, */
+body,
 main,
 header,
+button,
 div,
+nav,
 ul,
 li,
 a,
@@ -14,5 +16,12 @@ h3 {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+
     list-style: none;
+    font-family: 'Kode Mono', monospace;
+    color: var(--gray-100);
+    border: transparent;
+}
+button {
+    cursor: pointer;
 }

@@ -16,11 +16,16 @@ const createSkills = (tech, className) => {
     return div;
 };
 
-function renderSkills() {
+function renderSkills(delay = 1500) {
     let index = 0;
     const container = document.querySelector('.hardskills');
 
-    setInterval(() => {
+    const interval = setInterval(() => {
+        if (delay < 600 && index === techs.length) {
+            clearInterval(interval);
+            renderSkills();
+        }
+
         if (container.children.length === techs.length) {
             container.removeChild(container.children[0]);
         }
@@ -34,7 +39,7 @@ function renderSkills() {
             container.appendChild(skill);
         }
         index++;
-    }, 1500);
+    }, delay);
 }
 
 export { renderSkills };
