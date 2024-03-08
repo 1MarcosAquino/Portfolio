@@ -54,9 +54,6 @@ header div {
 .item-menu {
     background-color: var(--gray-700);
 }
-.selected {
-    font-weight: 700;
-}
 
 .item-menu {
     position: relative;
@@ -64,6 +61,11 @@ header div {
 }
 .item-menu a {
     color: var(--gray-100);
+}
+
+.selected a {
+    font-weight: 700;
+    color: var(--primary-color);
 }
 .item-menu::after {
     content: ' ';
