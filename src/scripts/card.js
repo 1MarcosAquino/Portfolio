@@ -1,6 +1,16 @@
 import { createElement } from './createElements.js';
 import { techs } from './techs.js';
 
+const excluid = [
+    '1MarcosAquino',
+    'Json_server_base',
+    'dev_in_training',
+    'dio-lab-open-source',
+    'back-kenzieCars',
+    'Background_Color',
+    'pagina-login',
+];
+
 async function renderTech(tech) {
     if (tech) {
         for (const index in techs) {
@@ -27,7 +37,7 @@ function replace(text) {
 async function createCard(repo) {
     const { name, description, language, homepage, html_url } = repo;
 
-    if (language && name != '1MarcosAquino') {
+    if (!excluid.includes(name)) {
         const card = createElement('div', null, { class: 'card' });
         const content = createElement('div', null, { class: 'content' });
         const repoName = createElement('h2', replace(name), {
