@@ -49,9 +49,38 @@ function mudarClasse() {
         });
     });
 }
-mudarClasse();
+
+function tuor() {
+    const tuor = document.querySelector('.tuor');
+    const spin = document.querySelector('.spin');
+    const backTop = document.querySelector('.backTop');
+
+    const [about, projects, contact] =
+        document.querySelectorAll('.item-menu a');
+
+    function fazertuor(element, time) {
+        setTimeout(() => {
+            element.click();
+        }, time);
+    }
+
+    tuor.addEventListener('click', () => {
+        spin.style.display = 'inline';
+
+        fazertuor(about, 0);
+        fazertuor(projects, 3000);
+        fazertuor(contact, 6000);
+
+        setTimeout(() => {
+            spin.style.display = 'none';
+            backTop.click();
+        }, 9000);
+    });
+}
+tuor();
 
 const response = await api();
 renderCard(response);
 typeText(title, text, 0);
 renderSkills(10);
+mudarClasse();
