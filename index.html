@@ -29,7 +29,6 @@
         <title>PORTFÓLIO</title>
 
         <style>
-            
             #installApp {
                 /* position: fixed; */
                 margin-top: 30px;
@@ -38,28 +37,6 @@
                 top: 45%;
             }
         </style>
-        <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function () {
-                    navigator.serviceWorker
-                        .register('./service-worker.js')
-                        .then(
-                            function (registration) {
-                                console.log(
-                                    'ServiceWorker registration successful with scope: ',
-                                    registration.scope
-                                );
-                            },
-                            function (err) {
-                                console.log(
-                                    'ServiceWorker registration failed: ',
-                                    err
-                                );
-                            }
-                        );
-                });
-            }
-        </script>
     </head>
 
     <body>
@@ -92,7 +69,7 @@
                     <h2 class="title"></h2>
 
                     <button class="tuor">Fazer tuor</button>
-                    <button 
+                    <button
                         id="installApp"
                         style="background-color: black"
                         onclick="installApp()"
@@ -161,22 +138,6 @@
                         <span>Copiar e-mail</span>
                         <img src="./public/clipboard.svg" alt="Copiar e-mail" />
                     </button>
-                    <script>
-                        const btn = document.querySelector('#btnEmail');
-                        btn.addEventListener('click', function () {
-                            var email = document.querySelector('#btnEmail');
-                            navigator.clipboard
-                                .writeText('contatomarcosaquino@gmail.com')
-                                .then(() => {
-                                    alert(
-                                        'Conteúdo copiado para a área de transferência!'
-                                    );
-                                })
-                                .catch((err) => {
-                                    console.error('Falha ao copiar: ', err);
-                                });
-                        });
-                    </script>
 
                     <a
                         class="button"
@@ -210,40 +171,6 @@
             </div>
             <a class="backTop" href="#top">VOLTA AO TOPO</a>
         </footer>
-
-        <script defer>
-            function installApp() {
-                if (window.matchMedia('(display-mode: standalone)').matches) {
-                    console.log('PWA já instalada');
-                } else {
-                    console.log('Mostrar prompt para instalação');
-                    window.addEventListener(
-                        'beforeinstallprompt',
-                        function (e) {
-                            e.prompt();
-                        }
-                    );
-                }
-                instalarPWA();
-            }
-
-            function instalarPWA() {
-                if (deferredPrompt) {
-                    // Mostra o prompt de instalação ao usuário
-                    deferredPrompt.prompt();
-                    // Aguarda o usuário interagir com o prompt de instalação
-                    deferredPrompt.userChoice.then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('O usuário aceitou a instalação');
-                        } else {
-                            console.log('O usuário recusou a instalação');
-                        }
-                        // Limpa o evento de prompt para instalação, já que ele só pode ser usado uma vez
-                        deferredPrompt = null;
-                    });
-                }
-            }
-        </script>
 
         <script type="module" src="./src/scripts/index.js"></script>
     </body>
