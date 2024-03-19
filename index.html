@@ -28,6 +28,15 @@
 
         <title>PORTFÓLIO</title>
 
+        <style>
+            #installApp {
+                /* position: fixed; */
+                margin-top: 30px;
+                padding: 10px;
+                left: 20px;
+                top: 45%;
+            }
+        </style>
         <script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function () {
@@ -82,6 +91,13 @@
                     <h2 class="title"></h2>
 
                     <button class="tuor">Fazer tuor</button>
+                    <button
+                        id="installApp"
+                        style="background-color: black"
+                        onclick="installApp()"
+                    >
+                        Adicionar à Tela Inicial
+                    </button>
                 </div>
             </aside>
 
@@ -193,6 +209,22 @@
             </div>
             <a class="backTop" href="#top">VOLTA AO TOPO</a>
         </footer>
+
+        <script defer>
+            function installApp() {
+                if (window.matchMedia('(display-mode: standalone)').matches) {
+                    console.log('PWA já instalada');
+                } else {
+                    console.log('Mostrar prompt para instalação');
+                    window.addEventListener(
+                        'beforeinstallprompt',
+                        function (e) {
+                            e.prompt();
+                        }
+                    );
+                }
+            }
+        </script>
 
         <script type="module" src="./src/scripts/index.js"></script>
     </body>
