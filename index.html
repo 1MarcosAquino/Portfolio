@@ -31,12 +31,18 @@
         <style>
             #installApp {
                 /* position: fixed; */
+                background-color: black;
                 margin-top: 30px;
                 padding: 10px;
                 left: 20px;
                 top: 45%;
             }
         </style>
+        <script>
+            if (typeof navigator.serviceWorker !== 'undefined') {
+                navigator.serviceWorker.register('pwabuilder-sw.js');
+            }
+        </script>
     </head>
 
     <body>
@@ -69,13 +75,7 @@
                     <h2 class="title"></h2>
 
                     <button class="tuor">Fazer tuor</button>
-                    <button
-                        id="installApp"
-                        style="background-color: black"
-                        onclick="installApp()"
-                    >
-                        Adicionar à Tela Inicial
-                    </button>
+                    <button id="installApp">Adicionar à Tela Inicial</button>
                 </div>
             </aside>
 
@@ -138,7 +138,6 @@
                         <span>Copiar e-mail</span>
                         <img src="./public/clipboard.svg" alt="Copiar e-mail" />
                     </button>
-
                     <a
                         class="button"
                         href="https://linkedin.com/in/marcosaquino21"
@@ -173,6 +172,5 @@
         </footer>
 
         <script type="module" src="./src/scripts/index.js"></script>
-        <script type="module" src="./teste.js"></script>
     </body>
 </html>
