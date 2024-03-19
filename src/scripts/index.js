@@ -90,3 +90,16 @@ document.querySelector('#installApp').style.display = 'none';
 if (location.hostname == '127.0.0.1' || location.hostname == 'localhost') {
     document.querySelector('#installApp').style.display = 'block';
 }
+
+const btn = document.querySelector('#btnEmail');
+btn.addEventListener('click', function () {
+    document.querySelector('#btnEmail');
+    navigator.clipboard
+        .writeText('contatomarcosaquino@gmail.com')
+        .then(() => {
+            alert('Conteúdo copiado para a área de transferência!');
+        })
+        .catch((err) => {
+            console.error('Falha ao copiar: ', err);
+        });
+});

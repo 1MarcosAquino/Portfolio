@@ -1,5 +1,5 @@
-src\scripts\service-worker0.js
-src/scripts/service-worker0.js
+src\scripts\service-worker.js
+src/scripts/service-worker.js
 service-worker.js
 database.json
 commits.json
@@ -9,4 +9,4 @@ validOS.js
 teste.js
 
 anote.txt
-service-worker0.js
+service-worker.js
