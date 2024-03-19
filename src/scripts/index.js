@@ -84,3 +84,9 @@ renderCard(response);
 typeText(title, text, 0);
 renderSkills(10);
 mudarClasse();
+
+document.querySelector('#installApp').style.display = 'none';
+
+if (location.hostname == '127.0.0.1' || location.hostname == 'localhost') {
+    document.querySelector('#installApp').style.display = 'block';
+}
