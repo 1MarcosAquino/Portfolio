@@ -1,5 +1,6 @@
 src\scripts\service-worker.js
 src/scripts/service-worker.js
+service-worker.js
 database.json
 commits.json
 bk/
