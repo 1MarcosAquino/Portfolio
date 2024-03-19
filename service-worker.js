@@ -1,11 +1,13 @@
 const CACHE_NAME = 'portfolio-v1';
-const urlsToCache = ['/', '/index.html', '/public/icon.png'];
+const urlsToCache = ['./', './index.html', './public/icon.png'];
 
 self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
             console.log('Opened cache');
-            return cache.addAll(urlsToCache);
+            return cache.addAll(urlsToCache).catch(function (error) {
+                console.error('Failed to add all resources to cache:', error);
+            });
         })
     );
 });
