@@ -223,6 +223,24 @@
                         }
                     );
                 }
+                instalarPWA();
+            }
+
+            function instalarPWA() {
+                if (deferredPrompt) {
+                    // Mostra o prompt de instalação ao usuário
+                    deferredPrompt.prompt();
+                    // Aguarda o usuário interagir com o prompt de instalação
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('O usuário aceitou a instalação');
+                        } else {
+                            console.log('O usuário recusou a instalação');
+                        }
+                        // Limpa o evento de prompt para instalação, já que ele só pode ser usado uma vez
+                        deferredPrompt = null;
+                    });
+                }
             }
         </script>
 

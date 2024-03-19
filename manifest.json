@@ -1,7 +1,7 @@
 {
     "name": "PORTFÓLIO",
     "short_name": "PORTFÓLIO",
-    "start_url": "https://1marcosaquino.github.io/Portfolio/",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#121214",
     "theme_color": "#ffffff",
