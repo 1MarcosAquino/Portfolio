@@ -1,7 +1,7 @@
 {
     "name": "PORTFÓLIO",
     "short_name": "PORTFÓLIO",
-    "start_url": "/",
+    "start_url": "http://127.0.0.1:5500/",
     "display": "standalone",
     "background_color": "#121214",
     "theme_color": "#ffffff",
