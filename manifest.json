@@ -2,7 +2,7 @@
     "name": "PORTFÓLIO",
     "short_name": "PORTFÓLIO",
     "start_url": "/Portfolio",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#121214",
     "theme_color": "#33ebe8",
     "icons": [
