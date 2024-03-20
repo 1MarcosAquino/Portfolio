@@ -13,3 +13,4 @@ service-worker.js
 workbox-sw.js   
 
 pwabuilder-sw.js
+offline.html
