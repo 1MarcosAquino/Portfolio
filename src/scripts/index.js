@@ -3,7 +3,7 @@ import { renderSkills } from './hardskills.js';
 import { renderCard } from './card.js';
 
 const title = document.querySelector('.title');
-const text = `Da linha de código ao sucesso, vamos construir juntos.`;
+const text = `Não é sobre ter as ferramentas certas, mas saber como usá-las.`;
 const delay = 100;
 
 function typeText(element, text, i) {
