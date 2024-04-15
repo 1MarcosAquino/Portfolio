@@ -141,6 +141,7 @@ main .projects {
 }
 
 .projects .card {
+    position: relative;
     border-radius: 4px;
     box-shadow: 0 4px 8px var(--gray-600);
     overflow: hidden;
@@ -328,4 +329,13 @@ footer a:hover {
         color: rgba(108, 108, 108, 0.132);
         z-index: -1;
     }
+}
+
+.novo {
+    background-color: blueviolet;
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 5px;
 }

@@ -104,12 +104,11 @@ btn.addEventListener('click', function () {
         });
 });
 
-(function () {
-    console.log('tes');
-    document.querySelectorAll('.card').forEach((element) => {
-        if (element.innerText == 'RELOGIO') {
-            element.style = "background-image: url('/public/relogio.PNG')";
-            console.log(element);
-        }
-    });
-})();
+setTimeout(function () {
+    const novo = document.createElement('span');
+    novo.innerText = 'NOVO!';
+    novo.classList.add('novo');
+
+    const element = document.querySelectorAll('.card')[0];
+    element.appendChild(novo);
+}, 100);
