@@ -103,7 +103,9 @@ async function createCard(repo) {
 
 async function renderCard(repos) {
     const container = document.querySelector('.projects');
-    for (const repo of repos) {
+    for (const repo of repos.sort(
+        (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+    )) {
         const children = await createCard(repo);
         if (children) container.appendChild(children);
     }
