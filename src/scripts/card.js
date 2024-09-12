@@ -9,12 +9,12 @@ const excluid = [
   "back-kenzieCars",
   "Background_Color",
   "pagina-login",
-  // "trilha-net-testes-unitarios-desafio",
-  // "trilha-net-api-desafio",
-  // "trilha-net-banco-de-dados-desafio",
-  // "trilha-net-poo-desafio",
-  // "trilha-net-explorando-desafio",
-  // "trilha-net-fundamentos-desafio",
+  "trilha-net-testes-unitarios-desafio",
+  "trilha-net-api-desafio",
+  "trilha-net-banco-de-dados-desafio",
+  "trilha-net-poo-desafio",
+  "trilha-net-explorando-desafio",
+  "trilha-net-fundamentos-desafio",
 ];
 
 async function renderTech(tech) {
