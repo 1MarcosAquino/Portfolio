@@ -16,18 +16,4 @@ function Tooltip({ tech, nameClass }: TooltipProps) {
   );
 }
 
-// function Tooltip({ techs, nameClass }: TooltipProps) {
-//   return (
-//     <>
-//       {techs.map((tech: Tech, index: number) => {
-//         return (
-//           <div key={index} className={`${nameClass} tooltip`}>
-//             <i className={Object.values(tech)[0]}></i>
-//             <span className="tooltiptext">{Object.keys(tech)[0]}</span>
-//           </div>
-//         );
-//       })}
-//     </>
-//   );
-// }
 export default Tooltip;

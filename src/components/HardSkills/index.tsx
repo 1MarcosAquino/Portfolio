@@ -1,3 +1,5 @@
+import Tooltip from "../Tooltip";
+
 interface Tech {
   [key: string]: string;
 }
@@ -21,12 +23,7 @@ function HardSkills() {
   return (
     <div className="hardskills">
       {techs.map((tech: Tech, index: number) => {
-        return (
-          <div key={index} className="tooltip">
-            <i className={Object.values(tech)[0]}></i>
-            <span className="tooltiptext">{Object.keys(tech)[0]}</span>
-          </div>
-        );
+        return <Tooltip key={index} nameClass="language" tech={tech} />;
       })}
     </div>
   );
