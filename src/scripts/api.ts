@@ -5,8 +5,15 @@ if (location.hostname == "127.0.0.1" || location.hostname == "localhost") {
   console.log("in dev");
 }
 
-export const api = async (url = baseUrl) => {
-  return await fetch(url)
+export const api = async (url = baseUrl, options: RequestInit) => {
+  const controller = new AbortController();
+
+  const myOptions = {
+    signal: controller.signal,
+    ...options,
+  };
+
+  return await fetch(url, myOptions)
     .then((res) => res.json())
     .catch((res) => console.error(res));
 };

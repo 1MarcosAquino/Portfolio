@@ -1,12 +1,6 @@
+import { SectionProps } from "../../interfaces";
 import HardSkills from "../HardSkills";
 import ProjectCard from "../ProjectCard";
-
-type SectionProps = {
-  id: string;
-  titlePart1: string;
-  titlePart2: string;
-  children: React.ReactNode;
-};
 
 function Section({ titlePart1, titlePart2, id, children }: SectionProps) {
   return (
@@ -30,17 +24,21 @@ function Main() {
         </div>
       </aside>
 
-      <Section id="início" titlePart1="Sobre" titlePart2="mim!">
+      <Section id="início" titlePart1="Sobre" titlePart2="mim">
         <div className="about">
           <p>
-            Tenho habilidade para
-            <strong>criar aplicações completas</strong>, desde a
-            <strong>estruturação do banco de dados</strong> até a elaboração da{" "}
-            <strong>interface do usuário.</strong> Meu domínio abrange não
-            apenas as linguagens de programação, mas também as tecnologias web,
-            permitindo-me desenvolver projetos desde sua concepção até a
-            <strong>integração com diversas ferramentas existentes</strong>,
-            como frameworks, bibliotecas e plataformas de hospedagem.
+            Sou um <strong>desenvolvedor web</strong> com{" "}
+            <strong>experiência</strong> em criar{" "}
+            <strong>soluções personalizadas</strong> que atendem às{" "}
+            <strong>necessidades específicas</strong> de cada cliente. Dominando
+            um amplo conjunto de <strong>tecnologias</strong>, desde{" "}
+            <strong>bancos de dados</strong> até{" "}
+            <strong>frameworks front-end</strong>, construo{" "}
+            <strong>aplicações escaláveis.</strong>
+            Desenvolvi diversos <strong>projetos</strong>,{" "}
+            <strong>otimizando processos</strong> e entregando{" "}
+            <strong>resultados</strong> que superaram as{" "}
+            <strong>expectativas dos clientes</strong>.
           </p>
         </div>
         <HardSkills />

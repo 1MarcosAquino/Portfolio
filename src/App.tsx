@@ -1,17 +1,27 @@
 import "./styles/global.css";
-import "./styles/reset.css";
-import "./styles/parallax.css";
-import "./styles/tootip.css";
 import "./styles/index.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import "./styles/parallax.css";
+import "./styles/reset.css";
+import "./styles/tootip.css";
+
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HeaderMenu from "./components/HeaderMenu";
+import Main from "./components/Main";
 
 function App() {
   return (
     <>
-      <Header userName="Marcos Aquino" />
-      <img src="./public/spin.svg" alt="spin" className="spin" />
+      <Header>
+        <div className="container">
+          <div className="logo">
+            <h2>Marcos Aquino</h2>
+            <p>&#60; Desenvolvedor Web &#47;&#62;</p>
+          </div>
+          <HeaderMenu />
+        </div>
+        <hr />
+      </Header>
       <Main />
       <Footer />
     </>
