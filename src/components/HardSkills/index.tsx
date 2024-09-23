@@ -9,7 +9,7 @@ function HardSkills() {
       <div className="hardskills">
         <div className="hardSkillContent">
           {techs.map((tech: Tech, index: number) => {
-            return <Tooltip key={index} nameClass="language" tech={tech} />;
+            return <Tooltip key={index} className="language" tech={tech} />;
           })}
         </div>
       </div>

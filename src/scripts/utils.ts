@@ -15,7 +15,7 @@ export const techs: Array<Tech> = [
   { php: "devicon-php-plain" },
 ];
 
-export const excluid = [
+export const excluidName = [
   "1MarcosAquino",
   "Json_server_base",
   "dev_in_training",
@@ -23,10 +23,10 @@ export const excluid = [
   "back-kenzieCars",
   "Background_Color",
   "pagina-login",
-  "trilha-net-testes-unitarios-desafio",
-  "trilha-net-api-desafio",
-  "trilha-net-banco-de-dados-desafio",
-  "trilha-net-poo-desafio",
+  // "trilha-net-testes-unitarios-desafio",
+  // "trilha-net-banco-de-dados-desafio",
+  // "trilha-net-api-desafio",
+  // "trilha-net-poo-desafio",
   "trilha-net-explorando-desafio",
   "trilha-net-fundamentos-desafio",
   "Relogio",
@@ -35,13 +35,30 @@ export const excluid = [
   "Portfolio",
 ];
 
-export function replaceString(text: string) {
-  let exit = "";
+export const excluidTach = ["C#"];
 
-  for (let index = 0; index <= text.length; index++) {
-    if (text[index]) {
-      exit += text[index].replace("-", " ").replace("_", " ");
-    }
-  }
-  return exit;
+type Project = {
+  id: number;
+  name: string;
+  created_at: string;
+  updated_at: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+};
+export const projects: Array<Project> = [];
+
+// export function replaceString(text: string) {
+//   let exit = "";
+
+//   for (let index = 0; index <= text.length; index++) {
+//     if (text[index]) {
+//       exit += text[index].replace("-", " ").replace("_", " ");
+//     }
+//   }
+//   return exit;
+// }
+
+export function replaceString(text: string) {
+  return text.replace(/[_-]/g, " ");
 }

@@ -4,6 +4,23 @@ export interface Tech {
   [key: string]: string;
 }
 
+export interface TooltipProps {
+  nameClass?: string;
+  tech: Tech;
+}
+
+export type Project = {
+  id: number;
+  name: string;
+  created_at: string;
+  updated_at: string;
+  description: string | null;
+  html_url: string;
+  language: string;
+  languages_url: string;
+  homepage: string | null;
+};
+
 export interface Repo {
   id: number;
   name: string;
@@ -22,7 +39,7 @@ export interface SectionProps {
   children: React.ReactNode;
 }
 
-export interface Container extends HTMLAttributes<HTMLDivElement> {
+export interface Container extends HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
 }
 

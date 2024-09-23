@@ -2,11 +2,15 @@ import styled from "styled-components";
 import { Container } from "../../interfaces";
 
 const Modal = styled.div<Container>`
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
 
-  position: absolute;
-  z-index: 1;
+  /* background-color: red; */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   padding: 20px;
 
   .btn-closed {

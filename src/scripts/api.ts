@@ -1,11 +1,9 @@
-let baseUrl = "https://api.github.com/users/1MarcosAquino/repos";
+const inDev = { localhost: "http://127.0.0.1:5173/database.json" };
+const inDeploy = "https://api.github.com/users/1MarcosAquino/repos";
 
-if (location.hostname == "127.0.0.1" || location.hostname == "localhost") {
-  baseUrl = "http://127.0.0.1:5173/database.json";
-  console.log("in dev");
-}
+const urlBase = inDev[location["hostname"]] ?? inDeploy;
 
-export const api = async (url = baseUrl, options: RequestInit) => {
+export const api = async (url = urlBase, options: RequestInit) => {
   const controller = new AbortController();
 
   const myOptions = {

@@ -1,8 +1,9 @@
 import "./styles/global.css";
-import "./styles/index.css";
-import "./styles/parallax.css";
 import "./styles/reset.css";
 import "./styles/tootip.css";
+
+import "./styles/index.css";
+import "./styles/parallax.css";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -23,7 +24,14 @@ function App() {
         <hr />
       </Header>
       <Main />
-      <Footer />
+      <Footer>
+        <div className="container">
+          &copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!
+        </div>
+        <a className="backTop" href="#top">
+          VOLTA AO TOPO
+        </a>
+      </Footer>
     </>
   );
 }
