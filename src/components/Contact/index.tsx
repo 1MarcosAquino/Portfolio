@@ -1,55 +1,53 @@
-import styled from "styled-components";
-import { Container } from "../../interfaces";
+import Form from "../form";
+import StyleContact from "./style";
 
-const Contact = styled.div<Container>`
-  height: 70dvh;
-  max-width: 70%;
+const Contact = () => (
+  <StyleContact>
+    <div>
+      <h2>Contato</h2>
+      <Form />
 
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* height: calc(min-content * 3); */
+      <div className="subtitle">
+        <h3>Deixe-me uma mensagem</h3>
+        <p>Vamos conversar e desenvolver soluções para sua empresa, juntos!</p>
+      </div>
 
-  position: relative;
+      <a
+        className="fone button"
+        href="https://api.whatsapp.com/send?phone=5582993233217&text=oi+vim+do+seu+portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./public/whatsapp.svg" alt="WhatsApp" />
 
-  display: flex;
-  column-gap: 100px;
-  align-items: center;
-  justify-content: space-between;
+        <span> (82) 9 9323-3217</span>
+      </a>
 
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  a,
-  button {
-    background-color: transparent;
-    padding: 2px 5px;
+      <a className="email button" id="btnEmail">
+        <img className="svg-icon" src="./public/gmail.svg" alt="Gmail" />
+        <span> contatomarcosaquino@gmail.com</span>
+      </a>
+      <a
+        className="linkedin button"
+        href="https://linkedin.com/in/marcosaquino21"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./public/linkedin.svg" alt="LinkedIn" />
+        <span> Vamos nos conectar.</span>
+      </a>
 
-    border: 1px darkolivegreen solid;
-    width: 60px;
-    :first-child {
-      width: inherit;
-    }
-  }
-
-  .background {
-    display: flex;
-
-    position: absolute;
-    top: 35%;
-    left: 52%;
-    /* width: 100%; */
-    height: fit-content;
-
-    justify-content: center;
-    align-items: center;
-
-    font-size: 5rem;
-    font-weight: 600;
-    color: rgba(117, 117, 117, 0.288);
-    z-index: 0;
-  }
-`;
+      <a
+        className="github button"
+        href="https://github.com/1MarcosAquino/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./public/github.svg" alt="GitHub" />
+        <span> 1MarcosAquino</span>
+      </a>
+    </div>
+  </StyleContact>
+);
 
 export default Contact;

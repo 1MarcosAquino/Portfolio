@@ -1,12 +1,35 @@
 import { useState } from "react";
+import styled from "styled-components";
 
-const MeuMenu = () => {
-  const menuItems = ["Início", "Projetos", "Contato"];
+const menuItems = ["Início", "Sobre mim", "Projetos", "Experiência", "Contato"];
 
+const SMenu = styled.ul`
+  all: unset;
+
+  list-style: none;
+
+  font-size: x-large;
+
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  li a {
+    transition: color 0.5s;
+  }
+
+  li:hover a {
+    color: var(--primary);
+  }
+`;
+
+const Menu = () => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <ul className="menu">
+    <SMenu>
       {menuItems.map((item, index) => (
         <li
           key={index}
@@ -16,8 +39,8 @@ const MeuMenu = () => {
           <a href={`#${item.toLowerCase()}`}>{item}</a>
         </li>
       ))}
-    </ul>
+    </SMenu>
   );
 };
 
-export default MeuMenu;
+export default Menu;

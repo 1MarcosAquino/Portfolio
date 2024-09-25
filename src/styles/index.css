@@ -35,6 +35,7 @@ header div {
     var(--secondary-color),
     var(--primary-color)
   );
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -101,30 +102,6 @@ header div {
 
 section {
   scroll-margin-top: 9.5rem;
-}
-
-main .about p {
-  text-indent: 2.1rem;
-  text-align: justify;
-}
-
-main .about p strong {
-  color: var(--primary-color);
-}
-
-main .hardskills {
-  display: flex;
-  align-items: end;
-  gap: 2rem;
-  width: 100%;
-  height: 140px;
-  margin: 2rem 0;
-  overflow: hidden;
-}
-
-main .hardskills i {
-  font-size: 5rem;
-  color: var(--gray-100);
 }
 
 /* 

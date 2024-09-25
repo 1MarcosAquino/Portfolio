@@ -39,7 +39,6 @@ const Card = styled.div<Container>`
   }
 
   .name {
-    color: var(--gray-100);
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
@@ -55,13 +54,11 @@ const Card = styled.div<Container>`
     margin-bottom: 15px;
     font-size: 0.9rem;
     line-height: 1.2;
-    color: var(--gray-100);
     overflow-y: auto;
   }
 
   .language {
     background-size: contain;
-    color: var(--gray-100);
 
     right: 5px;
     bottom: 8px;
@@ -132,25 +129,6 @@ const Card = styled.div<Container>`
     height: 2rem;
   }
 
-  footer {
-    color: var(--gray-100);
-    font-size: small;
-    height: 3.25rem;
-
-    text-align: center;
-    margin-top: 1.8rem;
-
-    padding-top: 1.8rem;
-  }
-  footer a {
-    display: block;
-    margin-top: 1rem;
-    padding-bottom: 2rem;
-    color: var(--gray-100);
-  }
-  footer a:hover {
-    color: var(--primary-color);
-  }
   @media (min-width: 535px) {
     body {
       padding-top: 7rem;

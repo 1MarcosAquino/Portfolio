@@ -1,22 +1,50 @@
 import { useState } from "react";
-import { SectionProps } from "../../interfaces";
+// import { SectionProps } from "../../interfaces";
+import styled from "styled-components";
 import Contact from "../Contact";
 import HardSkills from "../HardSkills";
 import Iframe from "../Iframe";
 import Modal from "../Modal";
 import ProjectCard from "../ProjectCard";
 
-function Section({ titlePart1, titlePart2, id, children }: SectionProps) {
-  return (
-    <section id={id}>
-      <h2 className="title">
-        {titlePart1} <span> {titlePart2}</span>
-      </h2>
+const Section = styled.section`
+  scroll-margin-top: 9.5rem;
+  width: var(--width);
+  max-width: var(--max-width);
+`;
 
-      {children}
-    </section>
-  );
-}
+const SMain = styled.section`
+  * > {
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border: solid red 1px;
+  }
+
+  /* .about p {
+    text-indent: 2.1rem;
+    text-align: justify;
+  }
+
+  .about p strong {
+    color: var(--primary-color);
+  }
+
+  .hardskills {
+    display: flex;
+    align-items: end;
+    gap: 2rem;
+    width: 100%;
+    height: 140px;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+
+  .hardskills i {
+    font-size: 5rem;
+    color: var(--gray-100);
+  } */
+`;
 
 function Main() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +56,7 @@ function Main() {
   };
 
   return (
-    <main id="top" className="container">
-      <aside className="parallax">
-        <div className="parallax-content">
-          <h3>Bem vindo!</h3>
-          <h2 className="title"></h2>
-        </div>
-      </aside>
-
+    <SMain>
       {isOpen && (
         <Modal>
           <button
@@ -48,7 +69,10 @@ function Main() {
         </Modal>
       )}
 
-      <Section id="início" titlePart1="Sobre" titlePart2="mim">
+      <Section id="início">
+        <h2 className="title">
+          Sobre <span> mim</span>
+        </h2>
         <div className="about">
           <p>
             Sou um <strong>desenvolvedor web</strong> com{" "}
@@ -68,52 +92,16 @@ function Main() {
         <HardSkills />
       </Section>
 
-      <Section id="projetos" titlePart1="Meus" titlePart2="Projetos">
+      <Section id="projetos">
+        <h2 className="title">
+          Meus <span> Projetos</span>
+        </h2>
+
         <ProjectCard click={click} />
       </Section>
-
-      <Section id="contato" titlePart1="Fale" titlePart2="comigo">
-        <Contact>
-          <div className="background">Contatos</div>
-          <h2>
-            Vamos conversar e desenvolver <br />
-            soluções para sua empresa,
-            <span> juntos</span>!
-          </h2>
-          <div className="cont">
-            <a
-              className="button"
-              href="https://api.whatsapp.com/send?phone=5582993233217&text=oi+vim+do+seu+portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./public/whatsapp.svg" alt="WhatsApp" />
-            </a>
-
-            <button className="button" id="btnEmail">
-              <img className="svg-icon" src="./public/gmail.svg" alt="Gmail" />
-            </button>
-            <a
-              className="button"
-              href="https://linkedin.com/in/marcosaquino21"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./public/linkedin.svg" alt="LinkedIn" />
-            </a>
-
-            <a
-              className="button"
-              href="https://github.com/1MarcosAquino/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./public/github.svg" alt="GitHub" />
-            </a>
-          </div>
-        </Contact>
-      </Section>
-    </main>
+      <div id="contato"></div>
+      <Contact />
+    </SMain>
   );
 }
 

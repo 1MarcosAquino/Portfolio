@@ -1,23 +1,35 @@
 import styled from "styled-components";
-import { Container } from "../../interfaces";
 
-const Footer = styled.footer<Container>`
-  color: var(--gray-100);
+const Footer = styled.footer`
+  color: var(--text);
   font-size: small;
-  height: 3.25rem;
+  height: max-content;
 
-  text-align: center;
-  margin-top: 1.8rem;
+  margin-top: 0;
 
-  padding-top: 1.8rem;
+  background: var(--gradient);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+
+  position: relative;
+  hr {
+    width: var(--width);
+    max-width: var(--max-width);
+
+    height: 1px;
+    background-color: var(--text);
+  }
+
   a {
-    display: block;
-    margin-top: 1rem;
+    color: var(--text);
     padding-bottom: 2rem;
-    color: var(--gray-100);
   }
   a:hover {
-    color: var(--primary-color);
+    color: var(--secondary);
   }
 `;
 
