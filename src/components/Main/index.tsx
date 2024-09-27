@@ -2,21 +2,22 @@ import Modal from "../Modal";
 import Projects from "../Projects";
 import MainStyle from "./style";
 
-import "../../styles/tootip.css";
-import Section from "../Section";
+import About from "../About";
+import Contact from "../Contact";
+import Expertience from "../Expertience";
+import Footer from "../Footer";
+import Header from "../Header";
 
 function Main() {
   return (
     <MainStyle>
-      {" "}
       <Modal />
-      <Section id="projetos">
-        <h2 className="title">
-          Meus <span> Projetos</span>
-        </h2>
-
-        <Projects />
-      </Section>
+      <Header />
+      <About />
+      <Projects />
+      <Expertience />
+      <Contact />
+      <Footer />
     </MainStyle>
   );
 }

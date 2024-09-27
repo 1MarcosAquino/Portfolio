@@ -33,12 +33,12 @@ const HeaderStyle = styled.header`
   .logo h2 {
     font-size: xx-large;
 
-    background: linear-gradient(to right, var(--secondary), var(--primary));
+    /* background: linear-gradient(to right, var(--secondary), var(--primary));
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-    font-weight: bold;
+    font-weight: bold; */
   }
 
   .whoIam {

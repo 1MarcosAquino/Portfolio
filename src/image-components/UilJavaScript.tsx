@@ -16,3 +16,26 @@ export function UilJavaScript(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function GTP(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg width="200" height="100" {...props}>
+      <defs>
+        <linearGradient
+          id="gradient"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          y1="0"
+          x2="1"
+          y2="0"
+        >
+          <stop offset="0%" style={{ stopColor: "var(--secondary)" }} />
+          <stop offset="100%" style={{ stopColor: "var(--primary)" }} />
+        </linearGradient>
+      </defs>
+      <text x="10" y="40" font-size="40">
+        Texto SVG
+      </text>
+    </svg>
+  );
+}

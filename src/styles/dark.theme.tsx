@@ -12,6 +12,7 @@ export const ThemeDark = createGlobalStyle`
     --primary-1: #00e9ff;
     --primary: #53a3d6;
     --secondary: #4B33D0;
+    --secondary-2: #0073ff;
     --text:#f8f9fa;
     --gray-100: #dddddd;
     --gray-200: #868e96;
@@ -19,7 +20,7 @@ export const ThemeDark = createGlobalStyle`
     --gray-500: rgba(0, 0, 0, 0.581);
     --gray-700: #121214;
 
-    --background:#0F162F;
+    --background:#000;
     /* --background:#0F162F; */
     --gradient: linear-gradient(to left, var(--primary), var(--secondary));
     --gradient-2: linear-gradient(to right bottom, var(--primary), var(--secondary));
@@ -56,7 +57,7 @@ p,
 hr,
 h1,
 h2,
-h3 {
+h3,form,input {
   
   margin: 0;
   padding: 0;
@@ -70,5 +71,11 @@ h3 {
 }
 button {
   cursor: pointer;
+}
+
+.container {
+  width: var(--width);
+  max-width: var(--max-width);
+ margin: 4rem auto 4rem auto;
 }
 `;

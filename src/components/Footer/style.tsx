@@ -5,8 +5,6 @@ const FooterStyle = styled.footer`
   font-size: small;
   height: max-content;
 
-  margin-top: 0;
-
   background: var(--gradient);
 
   display: flex;
@@ -16,6 +14,7 @@ const FooterStyle = styled.footer`
   row-gap: 2rem;
 
   position: relative;
+
   hr {
     width: var(--width);
     max-width: var(--max-width);

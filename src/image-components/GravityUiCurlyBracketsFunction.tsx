@@ -9,6 +9,20 @@ export function GravityUiCurlyBracketsFunction(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 16 16"
       {...props}
     >
+      <defs>
+        <linearGradient
+          id="gradient"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          y1="0"
+          x2="100%"
+          y2="0"
+        >
+          <stop offset="0%" style={{ stopColor: "var(--secondary)" }} />
+          <stop offset="100%" style={{ stopColor: "var(--primary)" }} />
+        </linearGradient>
+      </defs>
+
       <path
         fill="currentColor"
         fillRule="evenodd"
