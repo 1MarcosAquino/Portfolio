@@ -3,12 +3,13 @@ import { createGlobalStyle } from "styled-components";
 export const ThemeDark = createGlobalStyle`
 
 :root {
+
     scroll-behavior: smooth;
       margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-    /* --primary: #00e9ff; */
+    --primary-1: #00e9ff;
     --primary: #53a3d6;
     --secondary: #4B33D0;
     --text:#f8f9fa;
@@ -19,6 +20,7 @@ export const ThemeDark = createGlobalStyle`
     --gray-700: #121214;
 
     --background:#0F162F;
+    /* --background:#0F162F; */
     --gradient: linear-gradient(to left, var(--primary), var(--secondary));
     --gradient-2: linear-gradient(to right bottom, var(--primary), var(--secondary));
 
@@ -40,9 +42,6 @@ export const ThemeDark = createGlobalStyle`
     border-radius: 10px;
 }
 
-/* * {
-  all:unset;
-} */
 
 body,
 main,
@@ -72,7 +71,4 @@ h3 {
 button {
   cursor: pointer;
 }
-
 `;
-
-/*#8257E6;*/

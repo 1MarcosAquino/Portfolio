@@ -1,34 +1,41 @@
-import styled from "styled-components";
-import { Container } from "../../interfaces";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { useMyContext } from "../../provider";
+import Iframe from "../Iframe";
+import ModalStyle from "./style";
 
-const Modal = styled.div<Container>`
-  width: 100vw;
-  height: 100vh;
+const Modal = () => {
+  const { isOpen, setIsOpen } = useMyContext();
 
-  /* background-color: red; */
+  const url = localStorage.getItem("url") ?? "";
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  padding: 20px;
+  const action = () => {
+    setIsOpen(!isOpen);
 
-  .btn-closed {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    localStorage.removeItem("url");
+  };
 
-    width: 3rem;
-    height: 3rem;
-    background-color: #dadada;
-    border-radius: 100px;
-
-    .content {
-      width: 80%;
-      height: 90%;
-      border: solid red 1px;
+  window.onkeydown = ({ key }) => {
+    if (key === "Escape") {
+      window.onkeydown = null;
+      action();
     }
-  }
-`;
+  };
 
+  return (
+    <>
+      {isOpen && (
+        <ModalStyle>
+          <button onClick={action} className="btn-closed">
+            <Icon
+              icon="line-md:menu-to-close-alt-transition"
+              width="32"
+              height="32"
+            />
+          </button>
+          <Iframe src={url}></Iframe>
+        </ModalStyle>
+      )}
+    </>
+  );
+};
 export default Modal;

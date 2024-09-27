@@ -16,7 +16,7 @@ export type Project = {
   updated_at: string;
   description: string | null;
   html_url: string;
-  language: string;
+  language: string[];
   languages_url: string;
   homepage: string | null;
 };
@@ -25,7 +25,7 @@ export interface Repo {
   id: number;
   name: string;
   description: string;
-  language: string;
+  language: string[];
   homepage: string | null;
   html_url: string;
   created_at: string | Date | number;

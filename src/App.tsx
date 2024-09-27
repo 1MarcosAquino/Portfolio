@@ -1,46 +1,50 @@
-// import "./styles/global.css";
-// import "./styles/reset.css";
-import "./styles/tootip.css";
-
-// import "./styles/index.css";
-// import "./styles/parallax.css";
-
+import Contact from "./components/Contact";
+import Expertience from "./components/Expertience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HeaderMenu from "./components/HeaderMenu";
 import Main from "./components/Main";
+import Section from "./components/Section";
+import { MyProvider } from "./provider";
 import { ThemeDark } from "./styles/dark.theme";
 
 function App() {
   return (
     <>
       <ThemeDark />
-      <Header>
-        <div id="top">
-          <div className="logo">
-            <h2>Marcos Aquino</h2>
-            <p>&#60; Desenvolvedor Web &#47;&#62;</p>
-          </div>
-          <HeaderMenu />
-        </div>
-        <section className="whoIam">
-          <h1>Sou um desenvolvedor web C#, php e typescript.</h1>
+      <Header />
 
-          <a className="button" href="#projetos">
-            Ver Projetos
-          </a>
-        </section>
-      </Header>
-      <Main />
-      <Footer>
-        <hr />
-        <p>
-          &copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!
-        </p>
-        <a className="backTop" href="#top">
-          VOLTA AO TOPO
-        </a>
-      </Footer>
+      <Section id="início">
+        <h2 className="title">
+          Sobre <span> mim</span>
+        </h2>
+        <div className="about">
+          <p>
+            Sou um <strong>desenvolvedor web</strong> com{" "}
+            <strong>experiência</strong> em criar{" "}
+            <strong>soluções personalizadas</strong> que atendem às{" "}
+            <strong>necessidades específicas</strong> de cada cliente. Dominando
+            um amplo conjunto de <strong>tecnologias</strong>, desde{" "}
+            <strong>bancos de dados</strong> até{" "}
+            <strong>frameworks front-end</strong>, construo{" "}
+            <strong>aplicações escaláveis.</strong>
+            Desenvolvi diversos <strong>projetos</strong>,{" "}
+            <strong>otimizando processos</strong> e entregando{" "}
+            <strong>resultados</strong> que superaram as{" "}
+            <strong>expectativas dos clientes</strong>.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <Expertience />
+      </Section>
+
+      <MyProvider>
+        <Main />
+      </MyProvider>
+      <Contact />
+
+      <Footer />
     </>
   );
 }

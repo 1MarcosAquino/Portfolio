@@ -2,7 +2,7 @@ import Form from "../form";
 import StyleContact from "./style";
 
 const Contact = () => (
-  <StyleContact>
+  <StyleContact id="contato">
     <div>
       <h2>Contato</h2>
       <Form />

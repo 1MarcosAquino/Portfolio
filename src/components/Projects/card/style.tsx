@@ -1,17 +1,26 @@
 import styled from "styled-components";
-import { ArcticonsGithub } from "../../image-components/Github";
-import { Container, Repo, Tech } from "../../interfaces";
-import { excluidName, techs } from "../../scripts/utils";
-import Tooltip from "../Tooltip";
-import { useCard } from "./hook";
 
-const Card = styled.div<Container>`
+const CardStyle = styled.div`
+  & {
+    display: flex;
+  }
+
+  button {
+    background-color: transparent;
+  }
+  /* button {
+    all: unset;
+    cursor: pointer;
+
+    color: var(--text);
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  row-gap: 1rem;
+  row-gap: 1rem; */
 
-  .card {
+  /* .card {
     position: relative;
     border-radius: 4px;
     box-shadow: 0 4px 8px var(--gray-600);
@@ -25,7 +34,21 @@ const Card = styled.div<Container>`
     background-image: url("../../public/OIP.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
+
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px var(--gray-600);
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  transition: linear 0.5s;
+
+  background-image: url("../../public/OIP.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .content {
     margin: 0 auto;
@@ -153,61 +176,4 @@ const Card = styled.div<Container>`
   }
 `;
 
-function ProjectCard({ click }: { click: (url: string | null) => void }) {
-  const [repos] = useCard();
-
-  return (
-    <Card>
-      {repos.map((repo: Repo) => {
-        if (!excluidName.includes(repo.name)) {
-          const repoName = repo.name.replace(/[-_]/g, " ");
-          return (
-            <div key={repo.id} className="card">
-              <div className="content">
-                {repo.homepage && (
-                  <button
-                    className="homepage"
-                    onClick={() => click(repo.homepage)}
-                  >
-                    <img
-                      src="public/typcn_arrow-forward.svg"
-                      title="Ver demonstração"
-                    />
-                  </button>
-                )}
-
-                <h2 className="name">{repoName.toUpperCase()}</h2>
-
-                {repo.description && (
-                  <div className="description">{repo.description}</div>
-                )}
-
-                {techs.map((tech: Tech, index: number) => {
-                  if (tech[repo.language])
-                    return (
-                      <Tooltip key={index}>
-                        <div className="language tooltip">
-                          <i className={Object.values(tech)[0]}></i>
-                          <span className="tooltiptext">
-                            {Object.keys(tech)[0]}
-                          </span>
-                        </div>
-                      </Tooltip>
-                    );
-                })}
-                <a href={repo.html_url} className="html_url" target="_blank">
-                  <ArcticonsGithub width="1rem" height="1rem" />
-                </a>
-              </div>
-              {repos[0].updated_at === repo.updated_at && (
-                <span className="novo">NOVO!</span>
-              )}
-            </div>
-          );
-        }
-      })}
-    </Card>
-  );
-}
-
-export default ProjectCard;
+export default CardStyle;
