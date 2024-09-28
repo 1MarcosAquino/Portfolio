@@ -22,27 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-#
-index.old.html
-
-# gitignore.old
-src\scripts\service-worker.js
-src/scripts/service-worker.js
-service-worker.js
-database.json
-commits.json
-bk/
-validOS.js
-
-teste.js
-
-anote.txt
-service-worker.js
-workbox-sw.js   
-
-pwabuilder-sw.js
-offline.html
-manifest.json
-index.old2.html
-tooltip.html

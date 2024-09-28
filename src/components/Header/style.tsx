@@ -25,35 +25,55 @@ const HeaderStyle = styled.header`
     justify-content: center;
     flex-direction: column;
 
-    row-gap: 0.5rem;
+    row-gap: 0.2rem;
 
     font-size: large;
   }
 
-  .logo h2 {
-    font-size: xx-large;
+  .logo {
+    margin-top: 1rem;
+    h2 {
+      text-shadow: 2px 2px 5px var(--background-2);
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 0.9em;
+      color: var(--background-2);
+      font-weight: 500;
+      text-shadow: 1px 1px 5px var(--text);
+    }
+  }
 
-    /* background: linear-gradient(to right, var(--secondary), var(--primary));
+  /* background: linear-gradient(to right, var(--secondary), var(--primary));
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
     font-weight: bold; */
-  }
+
+  position: relative;
 
   .whoIam {
+    margin-top: 7rem;
     h1 {
-      font-size: xx-large;
+      font-size: 2.5em;
       letter-spacing: 0.11em;
+      font-weight: 500;
+      text-shadow: 2px 2px 5px var(--background-2);
     }
-    .button {
-      padding: 16px;
-      background: linear-gradient(to right, var(--primary), var(--secondary));
+  }
 
-      color: var(--gray-700);
-      font-weight: bold;
-      border-radius: 8px;
-    }
+  .button {
+    padding: 0.5rem 2.5rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+
+    color: var(--gray-700);
+    font-weight: bold;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 65%;
+    left: 24%;
   }
 `;
 

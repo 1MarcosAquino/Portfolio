@@ -1,0 +1,91 @@
+[
+  {
+    "id": 636251122,
+    "name": "BURGUER KENZIE",
+    "description": "Este projeto em React.js simula a funcionalidade de adicionar pedidos ao carrinho de compras em uma plataforma de lanchonete.",
+    "html_url": "https://github.com/1MarcosAquino/Burguer_Kenzie",
+    "homepage": "https://react-entrega-template-hamburgueria-da-kenzie-red.vercel.app/",
+    "language": ["JavaScript", "react"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/Burguer_Kenzie/languages"
+  },
+
+  {
+    "id": 727791328,
+    "name": "CALCULADORA SIMPLES TDD CSHAP",
+    "description": "Desenvolver uma calculadora básica utilizando a linguagem C# e aplicando a metodologia Test-Driven Development (TDD). O projeto visa demonstrar a implementação prática de TDD, garantindo a qualidade do código e a cobertura de testes unitários.",
+    "html_url": "https://github.com/1MarcosAquino/calculadora-simples_TDD_Cshap",
+    "homepage": null,
+    "language": ["C#"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/calculadora-simples_TDD_Cshap/languages"
+  },
+
+  {
+    "id": 770067054,
+    "name": "DEMONSTRATIVO DE RESULTADO",
+    "description": "Frellancer feito com em HTML5, CSS3, JavaScript e Appexcharts.  Este projeto consiste em uma dashboard integrada a um sistema ERP, desenvolvida para apresentar de forma clara e visual os resultados de vendas mensais.",
+    "html_url": "https://github.com/1MarcosAquino/DEMONSTRATIVO_DE_RESULTADO",
+    "homepage": "",
+    "language": ["HTML", "CSS", "JavaScript"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/DEMONSTRATIVO_DE_RESULTADO/languages"
+  },
+
+  {
+    "id": 770103436,
+    "name": "PRODUTOS PARADOS NO ESTOQUE",
+    "description": "Frellancer feito com em HTML5, CSS3, JavaScript e Appexcharts. Este projeto consiste em uma dashboard integrada a um sistema ERP, desenvolvida para apresentar de forma clara e visual o estoque que está parado.",
+    "html_url": "https://github.com/1MarcosAquino/PRODUTOS_PARADOS_NO_ESTOQUE",
+    "homepage": null,
+    "language": ["HTML", "CSS", "JavaScript"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/PRODUTOS_PARADOS_NO_ESTOQUE/languages"
+  },
+
+  {
+    "id": 543116432,
+    "name": "DEV IN TRAINING",
+    "description": "O NuKenzie é um aplicativo web desenvolvido com React.js que visa auxiliar os usuários no controle de suas finanças pessoais de forma intuitiva e eficiente. A ferramenta oferece um acompanhamento de gastos, proporcionando uma visão clara da situação financeira.",
+    "html_url": "https://github.com/1MarcosAquino/dev_in_training",
+    "homepage": "https://1marcosaquino.github.io/dev_in_training/",
+    "language": ["HTML", "CSS", "JavaScript"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/dev_in_training/languages"
+  },
+
+  {
+    "id": 779079130,
+    "name": "NFE NFCE",
+    "description": "API robusta e escalável para emissão de Nota Fiscal Eletrônica (NF-e) e Nota Fiscal de Consumidor Eletrônica (NFC-e), utilizando a linguagem PHP e as melhores práticas de desenvolvimento. A API tem como objetivo facilitar a integração com diversos sistemas, automatizando o processo de emissão e reduzindo a complexidade associada às especificações técnicas da NF-e e NFC-e.",
+    "html_url": "https://github.com/1MarcosAquino/NFe_NFCe",
+    "homepage": "",
+    "language": ["php"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/NFe_NFCe/languages"
+  },
+
+  {
+    "id": 635557909,
+    "name": ["NU KENZIE"],
+    "description": "O NuKenzie é um aplicativo web desenvolvido com React.js que visa auxiliar os usuários no controle de suas finanças pessoais de forma intuitiva e eficiente. A ferramenta oferece um acompanhamento de gastos, proporcionando uma visão clara da situação financeira.",
+    "html_url": "https://github.com/1MarcosAquino/Nu_Kenzie",
+    "homepage": "https://react-entrega-s1-template-nu-kenzie-psi.vercel.app",
+    "language": ["TypeScript", "react"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/Nu_Kenzie/languages"
+  },
+
+  {
+    "id": 712523513,
+    "name": "TRILHA NET API DESAFIO",
+    "description": "O NuKenzie é um aplicativo web desenvolvido com React.js que visa auxiliar os usuários no controle de suas finanças pessoais de forma intuitiva e eficiente. A ferramenta oferece um acompanhamento de gastos, proporcionando uma visão clara da situação financeira.",
+    "html_url": "https://github.com/1MarcosAquino/trilha-net-api-desafio",
+    "homepage": null,
+    "language": ["C#"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/trilha-net-api-desafio/languages"
+  },
+
+  {
+    "id": 713793238,
+    "name": "TRILHA NET BANCO DE DADOS DESAFIO",
+    "description": "O NuKenzie é um aplicativo web desenvolvido com React.js que visa auxiliar os usuários no controle de suas finanças pessoais de forma intuitiva e eficiente. A ferramenta oferece um acompanhamento de gastos, proporcionando uma visão clara da situação financeira.",
+    "html_url": "https://github.com/1MarcosAquino/trilha-net-banco-de-dados-desafio",
+    "homepage": null,
+    "language": ["TSQL"],
+    "languages_url": "https://api.github.com/repos/1MarcosAquino/trilha-net-banco-de-dados-desafio/languages"
+  }
+]

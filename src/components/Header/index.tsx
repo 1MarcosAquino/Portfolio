@@ -12,14 +12,18 @@ const Header = () => {
         </div>
         <HeaderMenu />
       </div>
-      <section className="whoIam">
-        <h1>Sou um desenvolvedor web C#, php e typescript.</h1>
-
+      <div className="whoIam">
+        <section>
+          <h1>
+            Sou um desenvolvedor web <br />
+            C#, PHP e typescript.
+          </h1>
+        </section>
         <a className="button" href="#projetos">
           Ver Projetos
         </a>
-      </section>
-      <GravityUiCurlyBracketsFunction width={"100px"} height={"100px"} />
+        <GravityUiCurlyBracketsFunction width={292} height={292} />
+      </div>
     </HeaderStyle>
   );
 };

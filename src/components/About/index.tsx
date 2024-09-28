@@ -3,6 +3,7 @@ import AboutStyle from "./style";
 const About = () => {
   return (
     <AboutStyle
+      id="sobre_mim"
       className="about container"
       style={{ maxWidth: "var(--max-width)" }}
     >

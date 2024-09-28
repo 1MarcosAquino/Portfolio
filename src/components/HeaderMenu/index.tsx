@@ -1,14 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const menuItems = ["Início", "Sobre mim", "Projetos", "Experiência", "Contato"];
+const menuItems = ["Sobre_mim", "Projetos", "Contato"];
 
 const SMenu = styled.ul`
   all: unset;
 
   list-style: none;
 
-  font-size: x-large;
+  font-size: large;
 
   text-transform: uppercase;
 
@@ -18,10 +18,11 @@ const SMenu = styled.ul`
 
   li a {
     transition: color 0.5s;
+    text-shadow: 1px 1px 1px var(--background-2);
   }
 
   li:hover a {
-    color: var(--primary);
+    color: var(--background-2);
   }
 `;
 
@@ -36,7 +37,7 @@ const Menu = () => {
           className={`item-menu ${selectedItem === index ? "selected" : ""}`}
           onClick={() => setSelectedItem(index)}
         >
-          <a href={`#${item.toLowerCase()}`}>{item}</a>
+          <a href={`#${item.toLowerCase()}`}>{item.replace("_", " ")}</a>
         </li>
       ))}
     </SMenu>

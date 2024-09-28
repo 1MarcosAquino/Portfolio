@@ -18,7 +18,7 @@ function Projects() {
   };
 
   return (
-    <Section>
+    <Section id="projetos">
       <h2 className="title">
         Meus <span> Projetos</span>
       </h2>

@@ -21,7 +21,7 @@ export const ThemeDark = createGlobalStyle`
     --gray-700: #121214;
 
     --background:#000;
-    /* --background:#0F162F; */
+    --background-2:#0F162F;
     --gradient: linear-gradient(to left, var(--primary), var(--secondary));
     --gradient-2: linear-gradient(to right bottom, var(--primary), var(--secondary));
 

@@ -20,8 +20,11 @@ const ProjectStyle = styled.section`
     padding: 0.5rem;
 
     border-radius: 16px;
-    border: 4px solid var(--background);
+    border: 4px solid var(--background-2);
     box-shadow: 0 4px 8px var(--gray-600);
+  }
+  .card p {
+    text-shadow: 2px 2px 3px var(--background);
   }
 
   .name {
