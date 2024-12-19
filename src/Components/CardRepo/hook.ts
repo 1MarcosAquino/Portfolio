@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
+import { api } from '../../Api';
 import { Repo } from '../../Interfaces';
-import { api } from '../../Scripts/api';
 
 export const useCard = () => {
     const [repos, setRepos] = useState<Array<Repo>>([] as Array<Repo>);

@@ -53,17 +53,4 @@ export const repos = [
         created_at: 'string',
         updated_at: 'string',
     },
-
-    {
-        id: 1,
-        name: 'TESTE',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        html_url: 'https://www.youtube.com/',
-        homepage: 'https://www.youtube.com/',
-        language: ['php', 'composer'],
-        languages_url: 'https://api.github.com/repos/1MarcosAquino/NFe_NFCe/languages',
-        created_at: 'string',
-        updated_at: 'string',
-    },
 ];
