@@ -83,10 +83,17 @@ const StyleContact = styled.div`
             column-gap: 1rem;
         }
 
-        img {
+        svg {
             width: 3rem;
         }
     }
+    a {
+        cursor: pointer;
+    }
+    a:hover {
+        color: var(--background);
+    }
+
     footer {
         grid-area: footer;
         color: var(--text);
@@ -100,12 +107,7 @@ const StyleContact = styled.div`
             height: 1px;
             background-color: var(--text);
         }
-
-        a:hover {
-            color: var(--secondary);
-        }
     }
-    /**/
 `;
 
 export default StyleContact;
