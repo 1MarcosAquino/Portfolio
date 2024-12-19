@@ -1,17 +1,18 @@
-import Main from "./components/Main";
-import { MyProvider } from "./provider";
-import { ThemeDark } from "./styles/dark.theme";
-import "./styles/tootip.css";
+import Main from './Pages/Main';
+import { MyProvider } from './Provider';
+import { ThemeDark } from './Styles/dark.theme';
+import { ResetCSS } from './Styles/reset';
 
 function App() {
-  return (
-    <>
-      <ThemeDark />
-      <MyProvider>
-        <Main />
-      </MyProvider>
-    </>
-  );
+    return (
+        <>
+            <ThemeDark />
+            <ResetCSS />
+            <MyProvider>
+                <Main />
+            </MyProvider>
+        </>
+    );
 }
 
 export default App;
