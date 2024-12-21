@@ -1,4 +1,4 @@
-import Modal from '../../Components/Modal';
+// import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
 import MainStyle from './style';
 
@@ -23,7 +23,7 @@ function Main() {
                     icon={`line-md:${theme ? 'moon' : 'sun-rising'}-loop`}
                 />
 
-                <Modal />
+                {/* <Modal /> */}
                 <Header />
                 <About />
                 <Projects />
