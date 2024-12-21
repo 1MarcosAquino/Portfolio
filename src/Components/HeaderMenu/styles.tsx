@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 const MenuStyle = styled.ul`
-    justify-self: end;
-
     width: fit-content;
     height: fit-content;
 
@@ -11,7 +9,7 @@ const MenuStyle = styled.ul`
     text-transform: uppercase;
 
     display: flex;
-    column-gap: 2rem;
+    column-gap: 0.95rem;
 
     li a {
         transition: color 0.5s;
@@ -20,6 +18,10 @@ const MenuStyle = styled.ul`
 
     li:hover a {
         color: var(--background-2);
+    }
+
+    @media (min-width: 760px) {
+        column-gap: 2rem;
     }
 `;
 

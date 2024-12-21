@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ProjectStyle = styled.section`
     background: var(--gradient);
-    height: 100dvh;
+    /* max-height: 100dvh; */
 
     display: flex;
     justify-content: center;

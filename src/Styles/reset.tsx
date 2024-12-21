@@ -9,7 +9,7 @@ export const ResetCSS = createGlobalStyle`
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--primary);
     border-radius: 10px;
 }
 
@@ -49,12 +49,12 @@ li {
   width: var(--width);
   max-width: var(--max-width);
  margin: 0 auto ;
+ min-height: fit-content;
 }
 
 .tooltip {
     position: relative;
     display: inline-block;
-    /* border-bottom: 1px dotted var(--secondary-color); */
 }
 
 .tooltip .tooltiptext {
@@ -90,6 +90,4 @@ li {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-}
-
-`;
+}`;

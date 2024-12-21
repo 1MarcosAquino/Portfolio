@@ -7,7 +7,7 @@ const Menu = () => {
     const menuItems = ['Sobre_mim', 'Projetos', 'Contato'];
 
     return (
-        <MenuStyle>
+        <MenuStyle className="menu">
             {menuItems.map((item, index) => (
                 <li
                     key={index}

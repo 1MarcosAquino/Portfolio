@@ -1,15 +1,15 @@
-export const api = async (
-    url = 'https://api.github.com/users/1MarcosAquino/repos',
+export const Api = async (
+    URL = 'https://api.github.com/users/1MarcosAquino/repos',
     options: RequestInit
 ) => {
     const controller = new AbortController();
 
-    const myOptions = {
+    const OPTIONS = {
         signal: controller.signal,
         ...options,
     };
 
-    return await fetch(url, myOptions)
+    return await fetch(URL, OPTIONS)
         .then((res) => res.json())
         .catch((res) => console.error(res));
 };

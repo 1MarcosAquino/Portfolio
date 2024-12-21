@@ -13,12 +13,12 @@ const MainStyle = styled.section`
     }
 
     .details-header {
-        border-bottom-right-radius: 200px;
-        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: var(--detailCurve);
+        border-bottom-left-radius: var(--detailCurve);
     }
     .details-footer {
-        border-top-right-radius: 200px;
-        border-top-left-radius: 200px;
+        border-top-right-radius: var(--detailCurve);
+        border-top-left-radius: var(--detailCurve);
     }
 `;
 

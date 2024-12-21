@@ -3,6 +3,8 @@ import styled from 'styled-components';
 const StyleContact = styled.div`
     background: var(--gradient);
 
+    /* 
+
     .container {
     }
 
@@ -107,7 +109,7 @@ const StyleContact = styled.div`
             height: 1px;
             background-color: var(--text);
         }
-    }
+    } */
 `;
 
 export default StyleContact;
