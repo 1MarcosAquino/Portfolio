@@ -37,7 +37,7 @@ const HeaderStyle = styled.header`
         max-width: fit-content;
         max-height: fit-content;
 
-        font-size: 2.5em;
+        font-size: 2rem;
         letter-spacing: 0.11em;
         font-weight: 500;
         text-shadow: 2px 2px 5px var(--background-2);
@@ -45,8 +45,6 @@ const HeaderStyle = styled.header`
 
     svg {
         display: none;
-        width: 150px;
-        height: 150px;
     }
 
     .button {
@@ -72,14 +70,15 @@ const HeaderStyle = styled.header`
         }
 
         .menu {
+            grid-column: 2/4;
             justify-self: end;
-            /* grid-column: 2/4; */
         }
 
         h1 {
+            max-width: 650px;
             grid-row: 2/3;
             grid-column: 1/2;
-            /* justify-self: start; */
+            font-size: 2.5rem;
         }
 
         svg {
@@ -95,16 +94,6 @@ const HeaderStyle = styled.header`
 
         .logo {
             grid-column: 1/2;
-            /* 
-            height: fit-content;
-
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-self: start;
-
-            font-size: large; 
-            */
         }
 
         .logo h2 {
@@ -114,14 +103,6 @@ const HeaderStyle = styled.header`
         .logo p {
             font-size: 1.1rem;
             font-weight: 600;
-        }
-
-        ul {
-            grid-column: 2/4;
-        }
-
-        h1 {
-            max-width: 650px;
         }
 
         .button {
