@@ -18,9 +18,13 @@ export const useCard = (): useCardReturn => {
     };
 
     useEffect(() => {
+        const originGithub = location.origin == 'https://1marcosaquino.github.io';
+
+        const url = `${location.origin}/${originGithub ? 'Portfolio' : ''}/database.json`;
+
         try {
             (async function () {
-                const response = await Api(`${location.origin}/database.json`, {
+                const response = await Api(url, {
                     signal: controller.signal,
                 });
 
