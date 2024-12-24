@@ -8,6 +8,7 @@ import About from '../../Components/About';
 import Contact from '../../Components/Contact';
 import Expertience from '../../Components/Expertience';
 import Header from '../../Components/Header';
+import Modal from '../../Components/Modal';
 import { Theme } from '../../Styles/theme';
 
 function Main() {
@@ -23,7 +24,7 @@ function Main() {
                     icon={`line-md:${theme ? 'moon' : 'sun-rising'}-loop`}
                 />
 
-                {/* <Modal /> */}
+                <Modal />
                 <Header />
                 <About />
                 <Projects />

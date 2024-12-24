@@ -6,20 +6,20 @@ import ModalStyle from './style';
 const Modal = () => {
     const { isOpen, setIsOpen } = useMyContext();
 
-    const url = localStorage.getItem('url') ?? '';
-
     const action = () => {
         setIsOpen(!isOpen);
 
         localStorage.removeItem('url');
     };
 
-    window.onkeydown = ({ key }) => {
-        if (key === 'Escape') {
-            window.onkeydown = null;
-            action();
-        }
-    };
+    if (isOpen) {
+        window.onkeydown = ({ key }) => {
+            if (key === 'Escape') {
+                window.onkeydown = null;
+                action();
+            }
+        };
+    }
 
     return (
         <>
@@ -28,7 +28,7 @@ const Modal = () => {
                     <button onClick={action} className="btn-closed">
                         <Icon icon="line-md:menu-to-close-alt-transition" width="32" height="32" />
                     </button>
-                    <Iframe src={url}></Iframe>
+                    <Iframe src={localStorage.getItem('url') ?? ''}></Iframe>
                 </ModalStyle>
             )}
         </>

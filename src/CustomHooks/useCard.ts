@@ -1,16 +1,26 @@
 import { useEffect, useState } from 'react';
-import { api } from '../../Api';
-import { Repo } from '../../Interfaces';
+import { Api } from '../Api';
+import { Repo } from '../Interfaces';
+import { useMyContext } from '../Provider';
 
-export const useCard = () => {
+type useCardReturn = [repos: Repo[], openModal: (url: string) => void];
+
+export const useCard = (): useCardReturn => {
     const [repos, setRepos] = useState<Array<Repo>>([] as Array<Repo>);
 
     const controller = new AbortController();
 
+    const { isOpen, setIsOpen } = useMyContext();
+
+    const openModal = (url: string) => {
+        localStorage.setItem('url', url);
+        setIsOpen(!isOpen);
+    };
+
     useEffect(() => {
         try {
             (async function () {
-                const response = await api('http://127.0.0.1:5173/database.json', {
+                const response = await Api('/database.json', {
                     signal: controller.signal,
                 });
 
@@ -28,5 +38,5 @@ export const useCard = () => {
         return () => {};
     }, []);
 
-    return [repos];
+    return [repos, openModal];
 };

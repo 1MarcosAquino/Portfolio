@@ -1,15 +1,9 @@
-import { repos } from '../../Api/repos';
-import { useMyContext } from '../../Provider';
+import { useCard } from '../../CustomHooks/useCard';
 import CardRepo from '../CardRepo';
 import ProjectStyle from './style';
 
 function Projects() {
-    const { isOpen, setIsOpen } = useMyContext();
-
-    const openModal = (url: string) => {
-        localStorage.setItem('url', url);
-        setIsOpen(!isOpen);
-    };
+    const [repos, openModal] = useCard();
 
     return (
         <ProjectStyle id="projetos">
