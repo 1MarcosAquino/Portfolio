@@ -20,7 +20,7 @@ export const useCard = (): useCardReturn => {
     useEffect(() => {
         try {
             (async function () {
-                const response = await Api('/database.json', {
+                const response = await Api(`${location.origin}/database.json`, {
                     signal: controller.signal,
                 });
 
