@@ -9,7 +9,7 @@ const ExpertienceStyle = styled.section`
         align-items: center;
     }
     svg {
-        color: var(--primary);
+        color: var(--expertience-color);
     }
 `;
 

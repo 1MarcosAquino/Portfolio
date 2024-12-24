@@ -13,24 +13,26 @@ const CardRepoStyle = styled.div`
         'github deploy . languages';
 
     width: 100%;
+    min-width: 350px;
     max-width: var(--cardMaxWidth);
     height: var(--cardHeigth);
+
+    max-height: 300px;
 
     padding: 0.5rem;
 
     border-radius: 16px;
-    border: 4px solid var(--background-2);
+    border: 4px solid var(--border-1);
     box-shadow: 0 4px 8px var(--gray-600);
 
     p {
-        text-shadow: 2px 2px 3px var(--background);
+        text-shadow: 2px 2px 3px var(--shadow-4);
     }
 
     .name {
         grid-area: title;
         text-align: end;
-
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 600;
     }
 
@@ -59,6 +61,12 @@ const CardRepoStyle = styled.div`
     button:hover,
     a:hover {
         color: var(--background);
+    }
+
+    @media (min-width: 1200px) {
+        .name {
+            font-size: 1.5rem;
+        }
     }
 `;
 

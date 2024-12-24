@@ -2,16 +2,21 @@ import { createGlobalStyle } from 'styled-components';
 
 export const ResetCSS = createGlobalStyle`
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-1) var(--background-2); 
+}
+
 ::-webkit-scrollbar {
     width: 5px;
-    height: 8px;
-    background-color: var(--gray-700);
+    background-color: var(--background-2);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--primary);
+    background: var(--primary-1);
     border-radius: 10px;
 }
+
 
 body,
 main,
@@ -33,7 +38,8 @@ h3,form,input {
   box-sizing: border-box;
   text-decoration: none;  
   border: transparent;
-  color: var(--text);  
+  color: var(--text-1);  
+  transition: color 0.1s;  
 }
 
 button {
@@ -60,8 +66,8 @@ li {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 6.25rem;
-    background-color: var(--gray-100);
-    color: var(--gray-700);
+    background-color: var(--background-3);
+    color: var(--text-2);
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
@@ -84,7 +90,7 @@ li {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--gray-100) transparent transparent transparent;
+    border-color: var(--background-3) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {

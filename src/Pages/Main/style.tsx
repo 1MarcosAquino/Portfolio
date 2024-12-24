@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainStyle = styled.section`
+const MainStyle = styled.main`
     .container {
         height: 70vh;
     }
@@ -9,7 +9,7 @@ const MainStyle = styled.section`
     .details-footer {
         height: 15dvh;
         min-width: 100%;
-        background: var(--gradient);
+        background: var(--gradient-1);
     }
 
     .details-header {

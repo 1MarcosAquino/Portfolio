@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyleContact = styled.div`
-    background: var(--gradient);
+    background: var(--gradient-1);
 
     .container {
         display: grid;
@@ -12,9 +12,6 @@ const StyleContact = styled.div`
     h2 {
         font-size: 3em;
         justify-self: center;
-        /* grid-area: title; */
-        /* text-align: center; */
-        /* align-items: center; */
     }
 
     form {
@@ -26,6 +23,7 @@ const StyleContact = styled.div`
         display: flex;
         align-items: center;
         column-gap: 1rem;
+        min-width: 333px;
 
         svg {
             width: 2rem;
@@ -36,6 +34,7 @@ const StyleContact = styled.div`
     footer {
         text-align: center;
         padding-bottom: 2rem;
+        background: var(--gradient-1);
 
         a {
             margin-top: 1rem;
@@ -50,15 +49,13 @@ const StyleContact = styled.div`
 
         width: 100%;
         height: 70dvh;
-        background-color: var(--secondary);
+        /* background-color: var(--secondary); */
 
         .container {
             width: var(--width);
             max-width: var(--max-width);
 
             display: grid;
-            /* grid-template-columns: 1fr 1fr 1fr; */
-            /* grid-template-rows: 1fr 1.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr; */
             grid-template-rows: repeat(auto-fit, minmax(72px, 1fr));
             gap: 16px 0px;
             grid-auto-flow: row;
@@ -99,7 +96,7 @@ const StyleContact = styled.div`
                 font-size: small;
                 text-align: end;
                 width: 330px;
-                color: var(--gray-100);
+                color: var(--text-4);
             }
 
             footer {
@@ -123,11 +120,11 @@ const StyleContact = styled.div`
             cursor: pointer;
         }
         a:hover {
-            color: var(--background);
+            color: var(--text-2);
         }
 
         footer {
-            color: var(--text);
+            color: var(--text-1);
             font-size: small;
 
             text-align: center;
@@ -136,13 +133,10 @@ const StyleContact = styled.div`
                 min-width: 100%;
 
                 height: 1px;
-                background-color: var(--text);
+                background-color: var(--background-1);
             }
         }
     }
-
-    /* 
-   */
 `;
 
 export default StyleContact;

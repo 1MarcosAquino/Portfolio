@@ -3,7 +3,24 @@ import { useState } from 'react';
 import Form from '../Form';
 import StyleContact from './style';
 
-const Contact = () => {
+type ContactsProps = {
+    icon: string;
+    href: string;
+    text: string;
+};
+
+const Contact = ({ icon, href, text }: ContactsProps) => {
+    return (
+        <li>
+            <Icon icon={icon} />
+            <a className="button" target="_blank" rel="noopener noreferrer" href={href}>
+                {text}
+            </a>
+        </li>
+    );
+};
+
+const ContactSection = () => {
     const [text, setText] = useState('Clique para copiar.');
 
     function copyEmail() {
@@ -22,6 +39,9 @@ const Contact = () => {
             });
     }
 
+    const zapLink =
+        'https://api.whatsapp.com/send?phone=5582993233217&text=oi+vim+do+seu+portfolio';
+
     return (
         <StyleContact id="contato">
             <div className="container">
@@ -33,60 +53,44 @@ const Contact = () => {
                 </div>
 
                 <ul>
-                    <li>
-                        <Icon icon={'ic:sharp-whatsapp'} />
-                        <a
-                            className="fone button"
-                            href="https://api.whatsapp.com/send?phone=5582993233217&text=oi+vim+do+seu+portfolio"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <span> (82) 9 9323-3217</span>
-                        </a>
-                    </li>
+                    <Contact icon="ic:sharp-whatsapp" href={zapLink} text="(82) 9 9323-3217" />
+
+                    <Contact
+                        icon="mingcute:linkedin-fill"
+                        href="https://linkedin.com/in/marcosaquino21"
+                        text="Vamos nos conectar."
+                    />
+
                     <li>
                         <Icon icon={'basil:gmail-outline'} />
                         <div className="tooltip">
                             <span className="tooltiptext">{text}</span>
 
-                            <a className="email button" id="btnEmail" onClick={copyEmail}>
+                            <a className="button" id="btnEmail" onClick={copyEmail}>
                                 <span> contatomarcosaquino@gmail.com</span>
                             </a>
                         </div>
                     </li>
-                    <li>
-                        <Icon icon={'mingcute:linkedin-fill'} />
-                        <a
-                            className="linkedin button"
-                            href="https://linkedin.com/in/marcosaquino21"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <span> Vamos nos conectar.</span>
-                        </a>
-                    </li>
-                    <li>
-                        <Icon icon={'mdi:github'} />
-                        <a
-                            className="github button"
-                            href="https://github.com/1MarcosAquino/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <span> 1MarcosAquino</span>
-                        </a>
-                    </li>
+
+                    <Contact
+                        icon="mdi:github"
+                        href={'https://github.com/1MarcosAquino/'}
+                        text="1MarcosAquino"
+                    />
                 </ul>
 
                 <Form />
 
                 <hr />
-                <footer>
-                    <p>&copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!</p>
-                    <a className="backTop" href="#top">
-                        VOLTA AO TOPO
-                    </a>
-                </footer>
             </div>
+            <footer>
+                <p>&copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!</p>
+                <a href="#top">
+                    <Icon icon="ep:arrow-up-bold" height={32} width={32} />
+                </a>
+            </footer>
         </StyleContact>
     );
 };
 
-export default Contact;
+export default ContactSection;

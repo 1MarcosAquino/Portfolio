@@ -10,6 +10,13 @@ const AboutStyle = styled.section`
         letter-spacing: 1.8px;
     }
 
+    .container,
+    h2,
+    p,
+    strong {
+        color: var(--text-4);
+    }
+
     h2 {
         font-size: xx-large;
         text-transform: uppercase;

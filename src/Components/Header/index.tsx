@@ -1,4 +1,3 @@
-// import { Icon } from '@iconify/react/dist/iconify.js';
 import { GravityUiCurlyBracketsFunction } from '../../imageComponents/GravityUiCurlyBracketsFunction';
 import HeaderMenu from '../HeaderMenu';
 import HeaderStyle from './styles';
@@ -19,7 +18,6 @@ const Header = () => {
                 <a className="button" href="#projetos">
                     Ver Projetos
                 </a>
-                {/* <Icon icon={'gravity-ui:curly-brackets-function'} width={32} height={32} /> */}
                 <GravityUiCurlyBracketsFunction />
             </div>
         </HeaderStyle>

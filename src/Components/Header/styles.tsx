@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 const HeaderStyle = styled.header`
     padding-top: 2.5rem;
-    width: 100dvw;
-    height: 70dvh;
-    background: var(--gradient);
+    width: 100%;
+
+    height: max-content;
+    min-height: 70dvh;
+    max-height: 100dvh;
+    background: var(--gradient-1);
 
     .container {
-        height: 100%;
+        min-height: 100%;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
@@ -22,13 +25,13 @@ const HeaderStyle = styled.header`
     }
 
     .logo h2 {
-        text-shadow: 2px 2px 5px var(--background-2);
+        text-shadow: var(--shadow-1);
         font-size: 1.5em;
     }
 
     .logo p {
         font-size: 1.1rem;
-        text-shadow: 2px 2px 5px var(--background-2);
+        text-shadow: var(--shadow-1);
 
         font-weight: 600;
     }
@@ -40,7 +43,7 @@ const HeaderStyle = styled.header`
         font-size: 2rem;
         letter-spacing: 0.11em;
         font-weight: 500;
-        text-shadow: 2px 2px 5px var(--background-2);
+        text-shadow: var(--shadow-1);
     }
 
     svg {
@@ -49,10 +52,10 @@ const HeaderStyle = styled.header`
 
     .button {
         padding: 0.5rem 2.5rem;
-        background: linear-gradient(to right, var(--primary), var(--secondary));
-        box-shadow: 2px 2px 5px var(--background-2);
+        background: var(--gradient-3);
+        box-shadow: var(--shadow-3);
 
-        color: var(--gray-700);
+        color: var(--text-3);
         font-weight: bold;
         border-radius: 8px;
 
@@ -97,7 +100,7 @@ const HeaderStyle = styled.header`
         }
 
         .logo h2 {
-            text-shadow: 2px 2px 5px var(--background-2);
+            text-shadow: var(--shadow-1);
             font-size: 1.5em;
         }
         .logo p {

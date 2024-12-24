@@ -17,7 +17,7 @@ export function GravityUiCurlyBracketsFunction(props: SVGProps<SVGSVGElement>) {
                     x2="100%"
                     y2="0">
                     <stop offset="0%" style={{ stopColor: 'var(--secondary-2)' }} />
-                    <stop offset="100%" style={{ stopColor: 'var(--secondary)' }} />
+                    <stop offset="100%" style={{ stopColor: 'var(--secondary-1)' }} />
                 </linearGradient>
             </defs>
 

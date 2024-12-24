@@ -13,11 +13,11 @@ const MenuStyle = styled.ul`
 
     li a {
         transition: color 0.5s;
-        text-shadow: 1px 1px 1px var(--background-2);
+        text-shadow: var(--shadow-2);
     }
 
     li:hover a {
-        color: var(--background-2);
+        color: var(--text-2);
     }
 
     @media (min-width: 760px) {
