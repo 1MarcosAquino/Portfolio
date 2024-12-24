@@ -20,7 +20,7 @@ export const useCard = (): useCardReturn => {
     useEffect(() => {
         const originGithub = location.origin == 'https://1marcosaquino.github.io';
 
-        const url = `${location.origin}/${originGithub ? 'Portfolio' : ''}/database.json`;
+        const url = `${location.origin}${originGithub ? '/Portfolio/' : '/'}database.json`;
 
         try {
             (async function () {
