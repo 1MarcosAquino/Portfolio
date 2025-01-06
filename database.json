@@ -1,12 +1,12 @@
 [
     {
         "id": 727791328,
-        "name": "CALCULADORA SIMPLES TDD CSHAP",
-        "description": "Desenvolver uma calculadora básica utilizando a linguagem C# e aplicando a metodologia Test-Driven Development (TDD). O projeto visa demonstrar a implementação prática de TDD, garantindo a qualidade do código e a cobertura de testes unitários.",
-        "html_url": "https://github.com/1MarcosAquino/calculadora-simples_TDD_Cshap",
+        "name": "CHAMA GARÇOM",
+        "description": "Aplicativo WEB desenvolvido para chamar garçom em restaurantes, bares e lanchonetes. O aplicativo tem como objetivo facilitar a comunicação entre o cliente e o garçom, agilizando o atendimento e melhorando a experiência do cliente.",
+        "html_url": "",
         "homepage": null,
-        "language": ["C#"],
-        "languages_url": "https://api.github.com/repos/1MarcosAquino/calculadora-simples_TDD_Cshap/languages",
+        "language": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        "languages_url": "",
         "created_at": "string",
         "updated_at": "string"
     },
