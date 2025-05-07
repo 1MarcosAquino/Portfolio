@@ -1,22 +1,22 @@
-import { Icon } from '@iconify/react/dist/iconify.js';
+// import { Icon } from '@iconify/react/dist/iconify.js';
 import React from 'react';
+// import Icon from '../../Components/Icon';
+import Icon from '../Icon';
 import { useExperience } from './hook';
-import ExpertienceStyle from './style';
 
 function Expertience() {
     const [skills] = useExperience();
 
     return (
-        <ExpertienceStyle>
+        <section className="expertience">
             <div className="details-header"></div>
             <div className="container">
                 {skills.map((tech, idx) => (
                     <React.Fragment key={idx}>
                         {Object.entries(tech).map(([name, icon], index) => {
                             return (
-                                <div key={index} className="tooltip">
-                                    <Icon icon={icon} width="72" height="72" />
-                                    <span className="tooltiptext">{name}</span>
+                                <div key={index} title={name}>
+                                    <Icon icon={icon} width="32" height="32" />
                                 </div>
                             );
                         })}
@@ -24,7 +24,7 @@ function Expertience() {
                 ))}
             </div>
             <div className="details-footer"></div>
-        </ExpertienceStyle>
+        </section>
     );
 }
 

@@ -1,0 +1,8 @@
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bs-body-bg);
+    z-index: 9;
+    padding: 0 15px;
+}

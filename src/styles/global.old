@@ -1,6 +1,3 @@
-import { createGlobalStyle } from 'styled-components';
-
-export const Theme = createGlobalStyle<{ dark?: boolean }>`
 :root {
 
     /* THEME COLORS START */
@@ -49,6 +46,9 @@ export const Theme = createGlobalStyle<{ dark?: boolean }>`
     --text-primary-hover: ${({ dark }) => (dark ? '#1E253F' : '#F8F9FA')};
     /* TEXT CORLORS END */
 
+
+
+
     /* TEXT DETAIL START */
     --details-background: var(--primary-color-2);
     --detail-header-background: var(--gradient-primary);
@@ -89,7 +89,7 @@ export const Theme = createGlobalStyle<{ dark?: boolean }>`
     --secondary-1: #4B33D0; */
 
     --primary-1: #76b4dd;     /* azul mais claro e suave */
-    --secondary-1: #7b64df;   /* roxo menos saturado */
+--secondary-1: #7b64df;   /* roxo menos saturado */
     
     --primary-2: #00e9ff;
     --primary-3: #5CE1E6; 
@@ -221,5 +221,3 @@ export const Theme = createGlobalStyle<{ dark?: boolean }>`
         border-bottom-right-radius: var(--details-border-radius);
         border-bottom-left-radius: var(--details-border-radius);
     }
-
-`;

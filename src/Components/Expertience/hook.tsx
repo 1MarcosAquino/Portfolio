@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ISkill } from '../../Interfaces';
-import { skills } from '../../Scripts/utils';
+import { skills } from '../../scripts/utils';
 
 export const useExperience = (delay = 1000) => {
     const [askills, setSkills] = useState<ISkill[]>([]);

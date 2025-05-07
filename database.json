@@ -4,7 +4,7 @@
         "name": "CALCULADORA SIMPLES TDD CSHAP",
         "description": "Desenvolver uma calculadora básica utilizando a linguagem C# e aplicando a metodologia Test-Driven Development (TDD). O projeto visa demonstrar a implementação prática de TDD, garantindo a qualidade do código e a cobertura de testes unitários.",
         "html_url": "https://github.com/1MarcosAquino/calculadora-simples_TDD_Cshap",
-        "homepage": null,
+        "homepage": "https://react-entrega-s1-template-nu-kenzie-psi.vercel.app/",
         "language": ["C#"],
         "languages_url": "https://api.github.com/repos/1MarcosAquino/calculadora-simples_TDD_Cshap/languages",
         "created_at": "string",

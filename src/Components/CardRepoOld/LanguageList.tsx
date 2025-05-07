@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { skills } from '../../Scripts/utils';
+import { skills } from '../../scripts/utils';
 
 const LanguageList = ({ languages }: { languages: string[] }) => (
     <div className="languages">

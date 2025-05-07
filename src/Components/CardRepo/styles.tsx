@@ -1,72 +1,100 @@
 import styled from 'styled-components';
 
 const CardRepoStyle = styled.div`
-    display: grid;
-    gap: 0.5rem 0;
-
-    grid-template-columns: auto 1fr 1fr auto;
-    grid-template-rows: 15% auto 15%;
-
-    grid-template-areas:
-        '. title title title'
-        'description description description description'
-        'github deploy . languages';
-
-    width: 100%;
-    min-width: 350px;
-    max-width: var(--cardMaxWidth);
-    height: var(--cardHeigth);
-
-    max-height: 300px;
+    height: auto;
+    width: 300px;
 
     padding: 0.5rem;
+    border-radius: 8px;
 
-    border-radius: 16px;
-    border: 4px solid var(--border-1);
-    box-shadow: 0 4px 8px var(--gray-600);
+    background-color: var(--cardRepo-background);
 
-    p {
-        text-shadow: 2px 2px 3px var(--shadow-4);
+    .card-section {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
-    .name {
-        grid-area: title;
-        text-align: end;
+    .card-container-image {
+        background-color: var(--cardRepo-container-image-background);
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+
+    .card-title {
+        color: var(--cardRepo-title);
+
+        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
-        font-weight: 600;
+        /* font-family: 'Poppins', sans-serif; */
+        /* font-family: 'Nunito', sans-serif; */
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: 'wdth' 100;
     }
 
-    .description {
-        grid-area: description;
-        overflow-y: auto;
+    .card-description {
+        color: var(--cardRepo-description);
+
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: 1px;
     }
 
-    .github {
-        grid-area: github;
-    }
-
-    .deploy {
-        grid-area: deploy;
+    .card-languages {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .languages {
-        grid-area: languages;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.5rem;
+        flex-wrap: wrap;
+
+        background-color: var(--cardRepo-btn-background);
+        color: var(--cardRepo-btn-color);
+
+        padding: 0.5rem;
+        border-radius: 5px;
     }
 
-    button {
-        background: transparent;
+    .languages .lang {
+        font-size: 0.8rem;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: 1px;
     }
 
-    .language:hover,
-    button:hover,
-    a:hover {
-        color: var(--background);
+    .btn {
+        background-color: var(--cardRepo-btn-background);
+        color: var(--cardRepo-btn-color);
+        padding: 0.5rem;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
     }
 
-    @media (min-width: 1200px) {
-        .name {
-            font-size: 1.5rem;
-        }
+    .link {
+        text-decoration: none;
     }
 `;
 

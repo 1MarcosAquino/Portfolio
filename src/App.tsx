@@ -1,15 +1,15 @@
 import Main from './Pages/Main';
 import { MyProvider } from './Provider';
-import { ResetCSS } from './Styles/reset';
+
+import './styles/global.css';
+import './styles/index.css';
+// import './styles/reset.css';
 
 function App() {
     return (
-        <>
-            <ResetCSS />
-            <MyProvider>
-                <Main />
-            </MyProvider>
-        </>
+        <MyProvider>
+            <Main />
+        </MyProvider>
     );
 }
 

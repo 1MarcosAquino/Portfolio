@@ -1,6 +1,10 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const ResetCSS = createGlobalStyle`
+
 * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-1) var(--background-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-1) var(--background-2); 
 }
 
 ::-webkit-scrollbar {
@@ -12,6 +16,7 @@
     background: var(--primary-1);
     border-radius: 10px;
 }
+
 
 body,
 main,
@@ -27,31 +32,30 @@ p,
 hr,
 h1,
 h2,
-h3,
-form,
-input {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: transparent;
-    color: var(--text-1);
-    transition: color 0.1s;
+h3,form,input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;  
+  border: transparent;
+  color: var(--text-1);  
+  transition: color 0.1s;  
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 li {
-    list-style: none;
+  list-style: none;
+
 }
 
 .container {
-    width: var(--width);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    min-height: fit-content;
+  width: var(--width);
+  max-width: var(--max-width);
+ margin: 0 auto ;
+ min-height: fit-content;
 }
 
 .tooltip {
@@ -92,4 +96,4 @@ li {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-}
+}`;

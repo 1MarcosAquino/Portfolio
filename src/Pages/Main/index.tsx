@@ -1,36 +1,48 @@
-// import Modal from '../../Components/Modal';
-import Projects from '../../Components/Projects';
-import MainStyle from './style';
+import { useEffect, useState } from 'react';
 
-import { Icon } from '@iconify/react/dist/iconify.js';
-import { useState } from 'react';
 import About from '../../Components/About';
+import { Alert } from '../../Components/Alert';
 import Contact from '../../Components/Contact';
 import Expertience from '../../Components/Expertience';
 import Header from '../../Components/Header';
+import Icon from '../../Components/Icon';
 import Modal from '../../Components/Modal';
-import { Theme } from '../../Styles/theme';
+import Projects from '../../Components/Projects';
 
 function Main() {
     const [theme, setTheme] = useState(true);
 
+    useEffect(() => {
+        document.body.classList.toggle('dark-mode', theme);
+    }, [theme]);
+
     return (
         <>
-            <Theme dark={theme} />
-            <MainStyle>
-                <Icon
-                    className="chooseTheme"
-                    onClick={() => setTheme(!theme)}
-                    icon={`line-md:${theme ? 'moon' : 'sun-rising'}-loop`}
-                />
+            <Alert />
+            <button className="chooseTheme" onClick={() => setTheme(!theme)}>
+                {theme && <Icon icon="line-md:moon-twotone-loop" width="32" height="32" />}
+                {!theme && <Icon icon="line-md:sun-rising-loop" width="32" height="32" />}
+            </button>
 
-                <Modal />
-                <Header />
+            <Header />
+            {/* <div className="body-wrapper p-2"></div> */}
+
+            <main className="body-wrapper p-2">
+                {/* <div className="container-fluid"></div> */}
                 <About />
+
                 <Projects />
                 <Expertience />
                 <Contact />
-            </MainStyle>
+                <Modal />
+
+                <footer>
+                    <p>&copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!</p>
+                    <a href="#top">
+                        <Icon icon="ep:arrow-up-bold" height="32" width="32" />
+                    </a>
+                </footer>
+            </main>
         </>
     );
 }

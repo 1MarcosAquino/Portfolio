@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MenuStyle = styled.ul`
+const NaveMenuStyle = styled.ul`
     width: fit-content;
     height: fit-content;
 
@@ -9,20 +9,11 @@ const MenuStyle = styled.ul`
     text-transform: uppercase;
 
     display: flex;
-    column-gap: 0.95rem;
-
-    li a {
-        transition: color 0.5s;
-        text-shadow: var(--shadow-2);
-    }
-
-    li:hover a {
-        color: var(--text-2);
-    }
+    column-gap: 1rem;
 
     @media (min-width: 760px) {
         column-gap: 2rem;
     }
 `;
 
-export default MenuStyle;
+export default NaveMenuStyle;

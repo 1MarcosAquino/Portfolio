@@ -1,28 +1,20 @@
-import AboutStyle from './style';
+import Section from '../Section';
 
 const About = () => {
     return (
-        <AboutStyle id="sobre_mim">
-            <div className="details-header"></div>
-
-            <div className="container">
-                <h2 className="title">
-                    Sobre <span> mim</span>
-                </h2>
-                <p>
-                    Sou um <strong>desenvolvedor web</strong> com <strong>experiência</strong> em
-                    criar <strong>soluções personalizadas</strong> que atendem às{' '}
-                    <strong>necessidades específicas</strong> de cada cliente. Dominando um amplo
-                    conjunto de <strong>tecnologias</strong>, desde <strong>bancos de dados</strong>{' '}
-                    até <strong>frameworks front-end</strong>, construo{' '}
-                    <strong>aplicações escaláveis.</strong>
-                    Desenvolvi diversos <strong>projetos</strong>,{' '}
-                    <strong>otimizando processos</strong> e entregando <strong>resultados</strong>{' '}
-                    que superaram as <strong>expectativas dos clientes</strong>.
-                </p>
-            </div>
-            <div className="details-footer"></div>
-        </AboutStyle>
+        <Section title="Sobre mim" id="sobre_mim">
+            <p className="text-custom fs-5">
+                Sou um <strong className="text-emphasis">desenvolvedor web</strong> com <strong className="text-emphasis">experiência</strong> em
+                criar <strong className="text-emphasis">soluções personalizadas</strong> que atendem às{' '}
+                <strong className="text-emphasis">necessidades específicas</strong> de cada cliente. Dominando um amplo conjunto de{' '}
+                <strong className="text-emphasis">tecnologias</strong>, desde <strong className="text-emphasis">bancos de dados</strong> até{' '}
+                <strong className="text-emphasis">frameworks front-end</strong>, construo{' '}
+                <strong className="text-emphasis">aplicações escaláveis.</strong> Desenvolvi diversos{' '}
+                <strong className="text-emphasis">projetos</strong>, <strong className="text-emphasis">otimizando processos</strong> e entregando{' '}
+                <strong className="text-emphasis">resultados</strong> que superaram as{' '}
+                <strong className="text-emphasis">expectativas dos clientes</strong>.
+            </p>
+        </Section>
     );
 };
 

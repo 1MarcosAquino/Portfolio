@@ -1,5 +1,5 @@
-import { Icon } from '@iconify/react/dist/iconify.js';
 import { useMyContext } from '../../Provider';
+import Icon from '../Icon';
 import Iframe from '../Iframe';
 import ModalStyle from './style';
 

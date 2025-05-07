@@ -1,23 +1,22 @@
 import { useState } from 'react';
-import MenuStyle from './styles';
+import NaveMenuStyle from './styles';
 
-const Menu = () => {
+const NaveMenu = () => {
     const [selectedItem, setSelectedItem] = useState(0);
 
     const menuItems = ['Sobre_mim', 'Projetos', 'Contato'];
 
     return (
-        <MenuStyle className="menu">
+        <NaveMenuStyle>
             {menuItems.map((item, index) => (
-                <li
-                    key={index}
-                    className={`item-menu ${selectedItem === index ? 'selected' : ''}`}
-                    onClick={() => setSelectedItem(index)}>
-                    <a href={`#${item.toLowerCase()}`}>{item.replace('_', ' ')}</a>
+                <li key={index} className={`item-menu ${selectedItem === index ? 'selected' : ''}`} onClick={() => setSelectedItem(index)}>
+                    <a className="link" href={`#${item.toLowerCase()}`}>
+                        {item.replace('_', ' ')}
+                    </a>
                 </li>
             ))}
-        </MenuStyle>
+        </NaveMenuStyle>
     );
 };
 
-export default Menu;
+export default NaveMenu;
