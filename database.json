@@ -5,7 +5,7 @@
         "description": "Aplicativo WEB desenvolvido para chamar garçom em restaurantes, bares e lanchonetes. O aplicativo tem como objetivo facilitar a comunicação entre o cliente e o garçom, agilizando o atendimento e melhorando a experiência do cliente.",
         "html_url": "",
         "homepage": null,
-        "language": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        "language": ["JavaScript", "PHP"],
         "languages_url": "",
         "created_at": "string",
         "updated_at": "string"
