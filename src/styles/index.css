@@ -32,10 +32,10 @@
 
 .topbar {
     /* position: fixed; */
+    /* height: 50px; */
+    /* background: red; */
     top: 0;
     width: 100%;
-    height: 50px;
-    /* background: red; */
     background: var(--bg);
     z-index: 9;
     padding: 0 15px;
@@ -77,84 +77,6 @@
     height: 2rem;
 
     transition: color 0.5s;
-}
-
-/* CARD START */
-.cardRepo {
-    height: auto;
-    min-width: 300px;
-    width: 300px;
-
-    padding: 0.5rem;
-    border-radius: 8px;
-
-    background-color: var(--cardRepo-background);
-}
-
-.cardRepo-section {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.cardRepo-container-image {
-    background-color: var(--cardRepo-container-image-background);
-    border-radius: 8px;
-    padding: 10px;
-}
-
-.cardRepo-image {
-    width: 100%;
-}
-
-.cardRepo-title {
-    color: var(--cardRepo-title);
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Nunito', sans-serif; */
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings: 'wdth' 100;
-}
-
-.cardRepo-description {
-    color: var(--cardRepo-description);
-
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-family: 'Nunito', sans-serif;
-    letter-spacing: 1px;
-}
-
-.cardRepo-languages {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.languages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 0.5rem;
-    flex-wrap: wrap;
-
-    background-color: var(--cardRepo-btn-background);
-    color: var(--cardRepo-btn-color);
-
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
-.languages .lang {
-    font-size: 0.8rem;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-family: 'Nunito', sans-serif;
-    letter-spacing: 1px;
 }
 
 .btn {
@@ -199,4 +121,8 @@
 }
 .expertience svg {
     color: var(--expertience-color);
+}
+
+.invert {
+    transform: scaleX(-1);
 }

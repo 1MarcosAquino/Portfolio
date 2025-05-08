@@ -1,49 +1,34 @@
-import { useEffect, useState } from 'react';
-
 import About from '../../Components/About';
 import { Alert } from '../../Components/Alert';
+import ChooseTheme from '../../Components/ChooseTheme';
 import Contact from '../../Components/Contact';
-import Expertience from '../../Components/Expertience';
 import Header from '../../Components/Header';
 import Icon from '../../Components/Icon';
+import Jobs from '../../Components/Jobs';
 import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
 
 function Main() {
-    const [theme, setTheme] = useState(true);
-
-    useEffect(() => {
-        document.body.classList.toggle('dark-mode', theme);
-    }, [theme]);
-
     return (
-        <>
+        <div className="container-fluid">
             <Alert />
-            <button className="chooseTheme" onClick={() => setTheme(!theme)}>
-                {theme && <Icon icon="line-md:moon-twotone-loop" width="32" height="32" />}
-                {!theme && <Icon icon="line-md:sun-rising-loop" width="32" height="32" />}
-            </button>
+            <ChooseTheme />
+            <Modal />
 
             <Header />
-            {/* <div className="body-wrapper p-2"></div> */}
+            <About />
+            <Jobs />
+            <Projects />
+            {/* <Expertience /> */}
+            <Contact />
 
-            <main className="body-wrapper p-2">
-                {/* <div className="container-fluid"></div> */}
-                <About />
-
-                <Projects />
-                <Expertience />
-                <Contact />
-                <Modal />
-
-                <footer>
-                    <p>&copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!</p>
-                    <a href="#top">
-                        <Icon icon="ep:arrow-up-bold" height="32" width="32" />
-                    </a>
-                </footer>
-            </main>
-        </>
+            <footer style={{ textAlign: 'center', paddingBlock: '1rem' }}>
+                <p className="text-secondary">&copy; 2024 Portfólio de Marcos Aquino - Todos os direitos reservados!</p>
+                <a href="#top" style={{ color: 'var(--info)' }}>
+                    <Icon icon="ep:arrow-up-bold" height="32" width="32" />
+                </a>
+            </footer>
+        </div>
     );
 }
 

@@ -6,29 +6,25 @@ function Projects() {
     const [repos, openModal] = useCard();
 
     // Agrupa os repositórios em grupos de até 3
-    const groupRepos = () => {
+    const groupRepos = (perPage = 3) => {
         const grouped = [];
-        for (let i = 0; i < repos.length; i += 2) {
-            grouped.push(repos.slice(i, i + 2));
+        for (let i = 0; i < repos.length; i += perPage) {
+            grouped.push(repos.slice(i, i + perPage));
         }
         return grouped;
     };
 
-    const groupedRepos = groupRepos();
+    const groupedRepos = groupRepos(2);
 
     return (
-        <Section id="projetos" title="Projetos">
-            {/* <h2 className="text-center text-uppercase mb-4">
-                Meus <span>Projetos</span>
-            </h2> */}
-
+        <Section id="projetos" title="O que eu já fiz">
             <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     {groupedRepos.map((group, i) => (
-                        <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
-                            <div className="row justify-content-center">
+                        <div style={{ minWidth: '100%' }} key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
+                            <div className="row justify-content-center g-2">
                                 {group.map((repo) => (
-                                    <div key={repo.id} className="col-md-4 d-flex justify-content-center g-3">
+                                    <div key={repo.id} className="col-md-4 d-flex justify-content-center g-2">
                                         <CardRepo repo={repo} click={openModal} />
                                     </div>
                                 ))}

@@ -5,14 +5,29 @@ const Header = () => {
     const [selectedItem, setSelectedItem] = useState(0);
     const menuItems = ['Sobre_mim', 'Projetos', 'Contato'];
 
+    const styles = {
+        top: '0',
+        width: '100%',
+        background: 'var(--bg)',
+        zIndex: '9',
+        padding: '0 15px',
+
+        // position: 'fixed',
+        // height: 50px,
+        // border: '1px solid red',
+    };
+
     return (
-        <header id="top" className="topbar">
+        <header id="top" style={styles}>
             <div className="container mt-3">
                 <div className="row align-items-center text-center text-md-start">
                     <div className="row">
                         <div className="col-12 col-md-6 mb-md-0">
                             <h1 className="fw-bold fs-3">Marcos Aquino</h1>
-                            <p className="fst-italic text-secondary">&lt; Desenvolvedor Web /&gt;</p>
+                            <p className="fst-italic text-secondary">
+                                <span style={{ color: 'var(--info)' }}>&lt;</span> Desenvolvedor Web
+                                <span style={{ color: 'var(--info)' }}> /&gt;</span>
+                            </p>
                         </div>
 
                         <div className="col-12 col-md-6">
@@ -23,7 +38,7 @@ const Header = () => {
                                             className={`nav-link text-uppercase fw-semibold ${selectedItem === index ? 'text-info' : 'text'}`}
                                             href={`#${item.toLowerCase()}`}
                                             onClick={() => setSelectedItem(index)}
-                                            style={{ cursor: 'pointer' }}
+                                            style={{ cursor: 'pointer', color: 'var(--text)' }}
                                         >
                                             {item.replace('_', ' ')}
                                         </a>

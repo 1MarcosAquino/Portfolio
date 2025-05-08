@@ -3,6 +3,8 @@ import { Repo } from '../../Interfaces';
 import { skills } from '../../scripts/utils';
 import Icon from '../Icon';
 
+import './styles.css';
+
 type CardRepoProps = { repo: Repo; click: (url: string) => void };
 
 const CardRepo = ({ repo, click }: CardRepoProps) => {
@@ -27,10 +29,10 @@ const CardRepo = ({ repo, click }: CardRepoProps) => {
                 ))}
             </span>
 
-            <div className="card-section row g-2">
+            <div className="cardRepo-section row g-2">
                 {homepage && (
                     <div className="col-md-6">
-                        <button className="btn link w-100" onClick={() => click(homepage)}>
+                        <button className="btn w-100" onClick={() => click(homepage)}>
                             <Icon icon="hugeicons:link-forward" width="24" height="24" />
                             <span>Ver demo</span>
                         </button>

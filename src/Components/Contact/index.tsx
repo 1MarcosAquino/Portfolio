@@ -2,7 +2,8 @@ import { alert } from '../Alert';
 import Icon from '../Icon';
 import Section from '../Section';
 import useClipboard from './hook';
-import StyleContact from './style';
+
+import './style.css';
 
 const contacts = [
     // {
@@ -13,17 +14,17 @@ const contacts = [
     {
         icon: 'ic:sharp-whatsapp',
         href: 'https://api.whatsapp.com/send?phone=5582993233217&text=oi+vim+do+seu+portfolio',
-        text: 'WhatsApp',
+        text: 'Clique aqui para enviar uma mensagem no WhatsApp',
     },
     {
         icon: 'line-md:github-loop',
         href: 'https://github.com/1MarcosAquino',
-        text: 'GitHub',
+        text: 'Clique aqui para acessar meu GitHub',
     },
     {
         icon: 'line-md:linkedin',
         href: 'https://www.linkedin.com/in/marcos-aquino/',
-        text: 'Linkedin',
+        text: 'Clique aqui para acessar meu Linkedin',
     },
 ];
 
@@ -42,36 +43,30 @@ const ContactSection = () => {
 
     return (
         <Section title="Contato" id="contato">
-            <StyleContact>
-                <div className="container">
-                    <div className="subtitle">
-                        <h3>Deixe-me uma mensagem ou mande um e-mail</h3>
-                        <p>Vamos conversar e desenvolver soluções para sua empresa, juntos!</p>
-                    </div>
+            <div className="subtitle">
+                <h3 className="text-info">Deixe-me uma mensagem ou mande um e-mail</h3>
+                <p>Vamos conversar e desenvolver soluções para sua empresa, juntos!</p>
+            </div>
 
-                    <ul>
-                        {contacts.map((contact, index) => (
-                            <li key={index}>
-                                <Icon icon={contact.icon} />
-                                <a className="button" target="_blank" rel="noopener noreferrer" href={contact.href}>
-                                    {contact.text}
-                                </a>
-                            </li>
-                        ))}
-
-                        <li>
-                            <Icon icon={'basil:gmail-outline'} />
-                            <button className="btn-link" onClick={action}>
-                                <span>Clique para copiar.</span>
-                            </button>
+            <div className="container">
+                <ul className="ul-contact">
+                    {contacts.map((contact, index) => (
+                        <li className="li-contact" key={index}>
+                            <Icon icon={contact.icon} />
+                            <a className="button" target="_blank" rel="noopener noreferrer" href={contact.href}>
+                                {contact.text}
+                            </a>
                         </li>
-                    </ul>
+                    ))}
 
-                    {/* <Form /> */}
-
-                    {/* <hr /> */}
-                </div>
-            </StyleContact>
+                    <li className="li-contact">
+                        <Icon icon={'basil:gmail-outline'} />
+                        <button onClick={action}>
+                            <span>Clique para copiar meu e-mail.</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </Section>
     );
 };

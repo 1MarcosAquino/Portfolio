@@ -1,22 +1,28 @@
 import { ReactNode } from 'react';
-import './style.css';
+
+import Icon from '../Icon';
+import StyleSection from './style';
 
 interface ISection {
     id?: string;
     children: ReactNode;
     title: string;
 }
+
 const Section = ({ children, title, id }: ISection) => {
     return (
-        <section id={id} className="section">
+        <StyleSection id={id} className="section">
             <div className="container">
-                <h2 className="mt-4 mb-4 text-uppercase">
+                <h2 className="section-title">
+                    <Icon icon="token:wing" height="32" width="32" />
                     {title}
+                    <Icon className="invert" icon="token:wing" height="32" width="32" />
+
                     <hr />
                 </h2>
-                {children}
+                <div className="row">{children}</div>
             </div>
-        </section>
+        </StyleSection>
     );
 };
 
